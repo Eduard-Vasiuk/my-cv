@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eduard Vasyuk | Junior PPC Specialist | RU UA EN</title>
-  <meta name="description" content="Eduard Vasyuk: junior PPC specialist working with Google Ads, AppsFlyer, performance reporting and marketing automation. Available in English, Ukrainian and Russian.">
+  <title>Eduard Vasyuk | Junior Media Buyer | Meta Ads, Google Ads</title>
+  <meta name="description" content="Eduard Vasyuk: junior media buyer working with Meta Ads, Google Ads, AppsFlyer, reporting and practical marketing automation. Available in English, Ukrainian and Russian.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#101114">
   <link rel="canonical" href="https://eduard-vasiuk.github.io/my-cv/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Eduard Vasyuk | Junior PPC Specialist">
-  <meta property="og:description" content="Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
+  <meta property="og:title" content="Eduard Vasyuk | Junior Media Buyer">
+  <meta property="og:description" content="Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
   <meta property="og:url" content="https://eduard-vasiuk.github.io/my-cv/">
   <meta property="og:image" content="https://eduard-vasiuk.github.io/my-cv/og-image.png">
   <meta property="og:image:secure_url" content="https://eduard-vasiuk.github.io/my-cv/og-image.png">
@@ -20,10 +20,10 @@
   <meta property="og:site_name" content="Eduard Vasyuk">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eduard Vasyuk | Junior PPC Specialist">
-  <meta name="twitter:description" content="Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
+  <meta name="twitter:title" content="Eduard Vasyuk | Junior Media Buyer">
+  <meta name="twitter:description" content="Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
   <meta name="twitter:image" content="https://eduard-vasiuk.github.io/my-cv/og-image.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Eduard Vasyuk","jobTitle":"Junior PPC Specialist","url":"https://eduard-vasiuk.github.io/my-cv/","sameAs":["https://github.com/Eduard-Vasiuk"],"knowsAbout":["Google Ads","AppsFlyer","Paid Acquisition","Performance Reporting","Marketing Automation"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Eduard Vasyuk","jobTitle":"Junior Media Buyer","url":"https://eduard-vasiuk.github.io/my-cv/","sameAs":["https://github.com/Eduard-Vasiuk"],"knowsAbout":["Meta Ads","Google Ads","Paid Acquisition","AppsFlyer","Marketing Automation"]}</script>
   <style>
     .language-switcher { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
     .language-switcher button { border: 0; background: transparent; color: var(--paper-muted); padding: 7px 9px; border-radius: 999px; cursor: pointer; font: 700 .68rem/1 "SFMono-Regular", Consolas, monospace; letter-spacing: .08em; }
@@ -259,6 +259,29 @@
     .contact-option-copy strong { font-size: 1rem; }
     .contact-option-copy small { margin-top: 2px; color: var(--ink-muted); font-size: .8rem; }
     .contact-arrow { font-size: 1.25rem; }
+    .case-trigger { cursor: pointer; }
+    .case-trigger:focus-visible { outline: 3px solid var(--acid); outline-offset: 4px; }
+    .case-feature.case-trigger { transition: transform .2s ease, box-shadow .2s ease; }
+    .case-feature.case-trigger:hover { transform: translateY(-3px); box-shadow: 0 18px 42px rgba(23,24,27,.12); }
+    .case-card.case-trigger { text-align: left; transition: transform .2s ease, box-shadow .2s ease; }
+    .case-card.case-trigger:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(23,24,27,.10); }
+    .case-open-hint { display: inline-flex; gap: 8px; align-items: center; margin-top: 18px; color: #6e5adc; }
+    .case-modal[hidden] { display: none; }
+    .case-modal { position: fixed; inset: 0; z-index: 45; display: grid; place-items: center; padding: 22px; background: rgba(16,17,20,.72); backdrop-filter: blur(14px); }
+    .case-modal-backdrop { position: absolute; inset: 0; cursor: pointer; }
+    .case-dialog { position: relative; z-index: 1; width: min(100%, 760px); max-height: min(720px, calc(100vh - 44px)); overflow: auto; padding: 30px; border: 1px solid var(--line-dark); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.35); }
+    .case-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+    .case-dialog-head .mono { padding-top: 9px; color: #6e5adc; }
+    .case-dialog h2 { max-width: 620px; margin: 0 0 14px; font-size: clamp(2.3rem, 6vw, 5rem); line-height: .92; letter-spacing: -.08em; }
+    .case-dialog-summary { max-width: 640px; margin: 0 0 28px; color: var(--ink-muted); font-size: 1.05rem; }
+    .case-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .case-detail-card { padding: 18px; border: 1px solid var(--line-dark); border-radius: 14px; }
+    .case-detail-card .mono { color: #6e5adc; }
+    .case-detail-card p { margin: 12px 0 0; color: var(--ink-muted); font-size: .92rem; }
+    .case-dialog-proof { display: grid; gap: 6px; margin-top: 16px; padding: 18px; border-radius: 14px; background: var(--ink); color: var(--paper); }
+    .case-dialog-proof strong { color: var(--acid); font-size: 1.05rem; }
+    .case-dialog-proof span { color: var(--paper-muted); font-size: .88rem; }
+    @media (max-width: 700px) { .case-dialog { padding: 24px 20px 20px; } .case-dialog-head { margin-bottom: 20px; } .case-detail-grid { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { .contact-dialog { padding: 22px 20px 20px; } .contact-dialog-head { margin-bottom: 21px; } .contact-dialog-head .mono { padding-top: 8px; } .contact-close { flex-basis: 40px; width: 40px; height: 40px; } }
     [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
     [data-reveal].visible { opacity: 1; transform: none; }
@@ -396,12 +419,11 @@
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="casesKicker">04 / Selected work</div>
-          <div><h2 data-i18n="casesTitle">Four projects. One operating system.</h2><p class="section-intro" data-i18n="casesIntro">The first cases show PPC execution. The next ones show the analytical and automation habits behind it.</p></div>
+          <div><h2 data-i18n="casesTitle">Four projects. A clearer way to buy and learn.</h2><p class="section-intro" data-i18n="casesIntro">The first case shows a tracking-heavy Google Ads setup. The next cases show the data, reporting and automation habits that support media buying. Open any card to see the problem, approach and evidence.</p></div>
         </div>
-
-        <article class="case-feature" data-reveal>
+        <article class="case-feature case-trigger" data-case-open="feature" data-reveal tabindex="0" role="button" aria-haspopup="dialog">
           <div class="case-visual">
-            <div class="mono eyebrow" data-i18n="featureKicker">Featured PPC case</div>
+            <div class="mono eyebrow" data-i18n="featureKicker">Featured acquisition case</div>
             <h3 data-i18n="featureTitle">iOS Utility App<br>Web-to-App setup</h3>
             <div class="case-route">
               <div class="route-item"><span data-i18n="route1">Google Search</span><b>→</b></div>
@@ -423,14 +445,14 @@
               <div class="metric"><strong>5</strong><span data-i18n="metric3">target markets</span></div>
               <div class="metric"><strong>14</strong><span data-i18n="metric4">search themes</span></div>
             </div>
-            <div class="status" data-i18n="featureStatus">Performance results not claimed. Tracking validation is the next gate.</div>
+            <div class="status" data-i18n="featureStatus">This is a setup case, not a claimed performance result. Tracking validation is the next gate.</div>
+            <div class="case-open-hint mono"><span data-i18n="caseOpen">Open case</span> ↗</div>
           </div>
         </article>
-
         <div class="case-grid">
-          <article class="case-card" data-reveal><div class="mono case-card-number">02 / <span data-i18n="case2Label">Data</span></div><h3 data-i18n="case2Title">Google Ads &amp; AppsFlyer diagnostics</h3><p data-i18n="case2Text">Separated attribution issues from conversion-goal issues and documented which data could be trusted.</p><div class="case-card-footer mono" data-i18n="case2Proof">13,218 rows / 198 campaigns ↗</div></article>
-          <article class="case-card" data-reveal><div class="mono case-card-number">03 / <span data-i18n="case3Label">Operations</span></div><h3 data-i18n="case3Title">Recurring performance reporting</h3><p data-i18n="case3Text">Standardized weekly and monthly reports with Cost, CPA, D4 ROAS, geographic comparison and quality checks.</p><div class="case-card-footer mono" data-i18n="case3Proof">Weekly + monthly / source-safe ↗</div></article>
-          <article class="case-card" data-reveal><div class="mono case-card-number">04 / <span data-i18n="case4Label">Automation</span></div><h3 data-i18n="case4Title">AI Support Copilot</h3><p data-i18n="case4Text">Designed a Gmail workflow that prepares replies, uses approved templates, flags risks and keeps human approval before sending.</p><div class="case-card-footer mono" data-i18n="case4Proof">5,000+ emails analyzed / human-in-loop ↗</div></article>
+          <article class="case-card case-trigger" data-case-open="diagnostics" data-reveal tabindex="0" role="button" aria-haspopup="dialog"><div class="mono case-card-number">02 / <span data-i18n="case2Label">Data</span></div><h3 data-i18n="case2Title">Google Ads &amp; AppsFlyer diagnostics</h3><p data-i18n="case2Text">Separated attribution issues from conversion-goal issues and documented which data could be trusted.</p><div class="case-card-footer mono" data-i18n="case2Proof">13,218 rows / 198 campaigns ↗</div></article>
+          <article class="case-card case-trigger" data-case-open="reporting" data-reveal tabindex="0" role="button" aria-haspopup="dialog"><div class="mono case-card-number">03 / <span data-i18n="case3Label">Operations</span></div><h3 data-i18n="case3Title">Recurring acquisition reporting</h3><p data-i18n="case3Text">Standardized weekly and monthly reports with Cost, CPA, D4 ROAS, geographic comparison and quality checks.</p><div class="case-card-footer mono" data-i18n="case3Proof">Weekly + monthly / source-safe ↗</div></article>
+          <article class="case-card case-trigger" data-case-open="support" data-reveal tabindex="0" role="button" aria-haspopup="dialog"><div class="mono case-card-number">04 / <span data-i18n="case4Label">Automation</span></div><h3 data-i18n="case4Title">AI Support Copilot</h3><p data-i18n="case4Text">Designed a Gmail workflow that prepares replies, uses approved templates, flags risks and keeps human approval before sending.</p><div class="case-card-footer mono" data-i18n="case4Proof">5,000+ emails analyzed / human-in-loop ↗</div></article>
         </div>
       </div>
     </section>
@@ -477,6 +499,24 @@
 
   <footer><div class="wrap"><div class="footer-row"><span>© <span id="year"></span> Eduard Vasyuk</span><div class="footer-links"><a href="https://github.com/Eduard-Vasiuk" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:edvard1256@gmail.com">Email</a><a href="#top" data-i18n="backTop">Back to top ↑</a></div></div></div></footer>
 
+  <div class="case-modal" id="case-modal" hidden aria-hidden="true">
+    <div class="case-modal-backdrop" data-case-close></div>
+    <section class="case-dialog" role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
+      <div class="case-dialog-head">
+        <div class="mono" data-case-field="kicker">04 / Case detail</div>
+        <button class="contact-close" type="button" data-case-close aria-label="Close">×</button>
+      </div>
+      <h2 id="case-modal-title" data-case-field="title">Case title</h2>
+      <p class="case-dialog-summary" data-case-field="summary">Case summary</p>
+      <div class="case-detail-grid">
+        <div class="case-detail-card"><div class="mono" data-i18n="caseModalProblem">Problem</div><p data-case-field="problem"></p></div>
+        <div class="case-detail-card"><div class="mono" data-i18n="caseModalApproach">Approach</div><p data-case-field="approach"></p></div>
+        <div class="case-detail-card"><div class="mono" data-i18n="caseModalOutput">Output</div><p data-case-field="output"></p></div>
+      </div>
+      <div class="case-dialog-proof"><strong data-case-field="proof"></strong><span data-case-field="guardrail"></span></div>
+    </section>
+  </div>
+
   <div class="contact-modal" id="contact-modal" hidden aria-hidden="true">
     <div class="contact-modal-backdrop" data-contact-close></div>
     <section class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
@@ -497,106 +537,119 @@
   <script>
     const translations = {
       en: {
-        navExperience:"Experience",navMethod:"How I work",navCases:"Cases",navContact:"Contact",navCta:"Discuss a role",contactModalKicker:"07 / Direct contact",contactModalTitle:"Choose where to contact me.",contactModalText:"Open the platform you use most. Each link takes you directly to my profile or chat.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Professional profile",contactTelegram:"Telegram",contactTelegramHint:"Direct chat",contactDjinni:"Djinni",contactDjinniHint:"Professional profile",contactClose:"Close",
-        heroKicker:"Junior PPC Specialist / Performance Systems",heroTitle:"Make the signal clear. Make the next move obvious.",
-        heroLead:"I work across Google Ads, AppsFlyer attribution, recurring performance reporting and practical automation. My focus is the space between a campaign click and a decision the team can trust.",
-        heroPrimary:"See PPC cases",heroSecondary:"Start a conversation",heroNote:"Open to junior PPC, performance marketing and marketing automation roles.",photoRole:"PPC / Data / Automation",
-        problemKicker:"01 / The recruiter question",problemTitle:"What happens when the numbers look active, but the signal is wrong?",problemIntro:"A campaign can generate clicks and installs while the team still cannot answer what to change next. That is the gap I learn to close.",
+        navExperience:"Experience",navMethod:"How I work",navCases:"Cases",navContact:"Contact",navCta:"Discuss a role",contactModalKicker:"07 / Direct contact",contactModalTitle:"Choose where to contact me.",contactModalText:"Open the platform you use most. Each link takes you directly to my profile or chat.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Professional profile",contactTelegram:"Telegram",contactTelegramHint:"Direct chat",contactDjinni:"Djinni",contactDjinniHint:"Professional profile",contactClose:"Close",caseOpen:"Open case",caseModalKicker:"04 / Case detail",caseModalProblem:"Problem",caseModalApproach:"Approach",caseModalOutput:"Output",caseModalProof:"Evidence",caseModalGuardrail:"Note",caseModalClose:"Close",caseFeatureKicker:"Featured acquisition case",caseFeatureTitle:"iOS Utility App / Web-to-App setup",caseFeatureSummary:"A tracking-heavy acquisition setup where the key question was whether a paid click could return as a trustworthy trial signal.",caseFeatureProblem:"The path from ad click to App Store and back to the ad platform needed a clear event map.",caseFeatureApproach:"Prepared tracking parameters, OneLink, AppsFlyer mapping, conversion actions and campaign drafts.",caseFeatureOutput:"A structured setup with five target markets, 14 search themes, a $50 test budget and a $20 target CPA draft.",caseFeatureProof:"Setup evidence: five markets, 14 themes, $50 budget draft.",caseFeatureGuardrail:"This is a prepared setup, not a claimed performance result. Tracking validation remains the next gate.",caseDiagnosticsKicker:"Data case",caseDiagnosticsTitle:"Google Ads & AppsFlyer diagnostics",caseDiagnosticsSummary:"A data-quality pass across campaign and asset exports to separate attribution issues from conversion-goal issues.",caseDiagnosticsProblem:"The team had numbers, but not enough confidence in which signals could drive decisions.",caseDiagnosticsApproach:"Reviewed 13,218 asset rows and 198 campaigns, compared source fields and documented gaps.",caseDiagnosticsOutput:"A diagnostic map with trusted fields, QA points and next checks.",caseDiagnosticsProof:"13,218 rows / 198 campaigns.",caseDiagnosticsGuardrail:"Evidence is about analyzed data and diagnostics, not a claimed revenue uplift.",caseReportingKicker:"Operations case",caseReportingTitle:"Recurring acquisition reporting",caseReportingSummary:"A repeatable weekly and monthly reporting workflow built for fast comparison, not manual copy-paste.",caseReportingProblem:"Recurring reviews were slowed by inconsistent views and repeated preparation.",caseReportingApproach:"Standardized Cost, CPA, D4 ROAS, geographic comparisons and QA/source checks.",caseReportingOutput:"A source-safe reporting structure for recurring acquisition reviews.",caseReportingProof:"Weekly + monthly / source-safe.",caseReportingGuardrail:"The value is a repeatable operating process, not an invented performance claim.",caseSupportKicker:"Automation case",caseSupportTitle:"AI Support Copilot",caseSupportSummary:"A human-in-the-loop workflow that helps support prepare safer replies without sending anything automatically.",caseSupportProblem:"Agents spent time repeating wording and checking risk before every response.",caseSupportApproach:"Designed a Gmail workflow with approved templates, risk flags, operator edits and final approval.",caseSupportOutput:"A controlled reply-preparation flow that keeps the person responsible for the send.",caseSupportProof:"5,000+ emails analyzed / human-in-loop.",caseSupportGuardrail:"The workflow supports the operator. It does not replace approval.",heroKicker:"Junior Media Buyer / Paid Acquisition Systems",heroTitle:"Make the signal clear. Make the next move obvious.",
+        heroLead:"I work across Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical automation. My focus is the space between a paid click and a decision the team can trust.",
+        heroPrimary:"See media buying cases",heroSecondary:"Start a conversation",heroNote:"Open to junior Media Buyer and paid acquisition roles.",photoRole:"PPC / Data / Automation",
+        problemKicker:"01 / The recruiter question",problemTitle:"What happens when paid traffic is active, but the signal is wrong?",problemIntro:"A campaign can generate clicks and installs while the team still cannot see what deserves the next budget decision. I help close that gap.",
         problem1Kicker:"Problem 01",problem1Title:"Installs arrive, but Google Ads sees the wrong event.",problem1Text:"Tracking and conversion mapping need to follow the user from the ad click to the meaningful in-app action.",
         problem2Kicker:"Problem 02",problem2Title:"Reports contain numbers, but hide the decision.",problem2Text:"Recurring reporting should preserve source truth, surface CPA and ROAS, and make comparison easier.",
         problem3Kicker:"Problem 03",problem3Title:"Support work repeats, so the team loses time.",problem3Text:"When a workflow is repetitive, a safe assistant can prepare the next action while keeping human approval in control.",
-        experienceKicker:"02 / Selected experience",experienceTitle:"Practical work across acquisition, reporting and automation.",experienceIntro:"A project-based profile built around real workflows, measurable inputs and clear handoffs. Commercial names are intentionally kept private.",experienceSide:"I do not present a list of disconnected tools. I show the kind of work I can take from an unclear problem to a usable system.",
-        exp1Meta:"Project work",exp1Title:"Performance Marketing & PPC Operations",exp1Text:"Prepared Google Ads Search setups, tracking parameters, conversion mapping and test plans for an iOS utility product.",
+        experienceKicker:"02 / Selected experience",experienceTitle:"Practical work across paid social, acquisition, reporting and automation.",experienceIntro:"A project-based profile built around real workflows, measurable inputs and clear handoffs. Commercial names are intentionally kept private.",experienceSide:"I do not present a list of disconnected tools. I show the kind of work I can take from an unclear problem to a usable system.",
+        exp1Meta:"Project work",exp1Title:"Media Buying & Paid Acquisition",exp1Text:"Worked across Meta Ads and Google Ads workflows: campaign structure, tracking parameters, conversion mapping and test plans.",
         exp2Meta:"Recurring workflow",exp2Title:"Marketing Reporting & Data Operations",exp2Text:"Built weekly and monthly reporting workflows with Cost, CPA, D4 ROAS, geographic comparison and quality checks.",
         exp3Meta:"Product build",exp3Title:"Support Automation Product",exp3Text:"Designed an AI-assisted support workflow that prepares replies, applies approved rules and keeps a human approval boundary before sending.",
-        methodKicker:"03 / How I work",methodTitle:"From messy signal to a useful next step.",methodIntro:"My projects follow the same working rhythm: understand the failure, connect the data, then make the result usable for the team.",
+        methodKicker:"03 / How I work",methodTitle:"From unclear paid traffic to a clear next action.",methodIntro:"My projects follow the same working rhythm: understand the failure, connect the data, then make the result usable for the team.",
         method1Label:"Diagnose",method1Title:"Find where the story breaks.",method1Text:"Check the campaign goal, event source, attribution path, report fields and data limitations before recommending a change.",
         method2Label:"Connect",method2Title:"Build the handoff.",method2Text:"Configure tracking parameters, OneLink or conversion mapping so the right signal can travel through the system.",
         method3Label:"Make usable",method3Title:"Turn evidence into action.",method3Text:"Deliver a campaign draft, a repeatable report, a QA checklist or a safe workflow that another person can use.",
-        casesKicker:"04 / Selected work",casesTitle:"Four projects. One operating system.",casesIntro:"The first cases show PPC execution. The next ones show the analytical and automation habits behind it.",
-        featureKicker:"Featured PPC case",featureTitle:"iOS Utility App<br>Web-to-App setup",featureMeta:"01 / Setup prepared",featureHeadline:"Preserve the click. Return the right conversion.",featureText:"The campaign needed to send iOS Search traffic to the App Store while preserving click IDs and returning a trial-active signal to Google Ads.",
+        casesKicker:"04 / Selected work",casesTitle:"Four projects. A clearer way to buy and learn.",casesIntro:"The first case shows a tracking-heavy Google Ads setup. The next cases show the data, reporting and automation habits that support media buying. Open any card to see the problem, approach and evidence.",
+        featureKicker:"Featured acquisition case",featureTitle:"iOS Utility App<br>Web-to-App setup",featureMeta:"01 / Setup prepared",featureHeadline:"Preserve the click. Return the right conversion.",featureText:"The campaign needed to send iOS Search traffic to the App Store while preserving click IDs and returning a trial-active signal to Google Ads.",
         featureList1:"Google Ads Web and AppsFlyer setup",featureList2:"OneLink and tracking parameters",featureList3:"Conversion action and event mapping",featureList4:"Search themes and ad copy",featureList5:"Five target markets",featureList6:"Budget and target CPA draft",
-        metric1:"daily test budget",metric2:"target CPA",metric3:"target markets",metric4:"search themes",featureStatus:"Performance results not claimed. Tracking validation is the next gate.",
+        metric1:"daily test budget",metric2:"target CPA",metric3:"target markets",metric4:"search themes",featureStatus:"This is a setup case, not a claimed performance result. Tracking validation is the next gate.",
         route1:"Google Search",route2:"AppsFlyer Web",route3:"Trial signal",route4:"Google Ads",
         case2Label:"Data",case2Title:"Google Ads & AppsFlyer diagnostics",case2Text:"Separated attribution issues from conversion-goal issues and documented which data could be trusted.",case2Proof:"13,218 rows / 198 campaigns ↗",
-        case3Label:"Operations",case3Title:"Recurring performance reporting",case3Text:"Standardized weekly and monthly reports with Cost, CPA, D4 ROAS, geographic comparison and quality checks.",case3Proof:"Weekly + monthly / source-safe ↗",
+        case3Label:"Operations",case3Title:"Recurring acquisition reporting",case3Text:"Standardized weekly and monthly reports with Cost, CPA, D4 ROAS, geographic comparison and quality checks.",case3Proof:"Weekly + monthly / source-safe ↗",
         case4Label:"Automation",case4Title:"AI Support Copilot",case4Text:"Designed a Gmail workflow that prepares replies, uses approved templates, flags risks and keeps human approval before sending.",case4Proof:"5,000+ emails analyzed / human-in-loop ↗",
         evidenceKicker:"05 / Evidence",evidenceTitle:"Useful numbers, with their context attached.",evidenceIntro:"These are project signals, not inflated performance claims. Each number says what was analyzed, prepared or delivered.",
         proof1:"asset rows analyzed in a Google Ads export",proof2:"campaigns reviewed for diagnostics",proof3:"campaigns in a recurring performance report",proof4:"support emails analyzed for workflow design",
         capabilitiesKicker:"06 / Capabilities",capabilitiesTitle:"What I can contribute from day one.",capabilitiesIntro:"A practical junior profile: structured enough to work with data, curious enough to find the cause, and careful enough to label what is still being validated.",
-        cap1Title:"Campaign setup",cap1Text:"Search themes, keyword structure, ad copy, markets, budgets and target CPA drafts.",cap2Title:"Tracking & attribution",cap2Text:"AppsFlyer, OneLink, click IDs, event mapping and Google Ads conversion signals.",
-        cap3Title:"Performance reporting",cap3Text:"Weekly and monthly reports built around Cost, CPA, D4 ROAS and comparison.",cap4Title:"Data diagnostics",cap4Text:"Source checks, campaign and asset analysis, limitations and QA before conclusions.",
+        cap1Title:"Meta Ads campaign setup",cap1Text:"Campaign structure, audiences, creatives, budgets, tests and launch checklists for paid social.",cap2Title:"Tracking & attribution",cap2Text:"AppsFlyer, OneLink, click IDs, event mapping and Google Ads conversion signals.",
+        cap3Title:"Media buying reporting",cap3Text:"Weekly and monthly views built around Cost, CPA, D4 ROAS, comparisons and source checks.",cap4Title:"Data diagnostics",cap4Text:"Source checks, campaign and asset analysis, limitations and QA before conclusions.",
         cap5Title:"Workflow automation",cap5Text:"Repeatable processes that reduce manual work without hiding the approval boundary.",cap6Title:"Product thinking",cap6Text:"Translate an operational pain point into a tested workflow that a team can actually use.",
-        contactKicker:"07 / Next conversation",contactTitle:"Let’s talk about the signal behind the campaign.",contactText:"I am looking for a junior PPC, performance marketing or marketing automation role where I can contribute to campaign setup, tracking, reporting and structured problem solving.",contactCta:"Contact Eduard",backTop:"Back to top ↑"
+        contactKicker:"07 / Next conversation",contactTitle:"Let’s talk about the signal behind the campaign.",contactText:"I am looking for a junior Media Buyer role where I can contribute to campaign setup, tracking, reporting and structured problem solving.",contactCta:"Contact Eduard",backTop:"Back to top ↑"
       },
       ru: {
-        navExperience:"Опыт",navMethod:"Как я работаю",navCases:"Кейсы",navContact:"Контакты",navCta:"Обсудить вакансию",contactModalKicker:"07 / Прямой контакт",contactModalTitle:"Выберите, где со мной связаться.",contactModalText:"Откройте удобную платформу. Ссылка сразу ведёт в мой профиль или чат.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Профессиональный профиль",contactTelegram:"Telegram",contactTelegramHint:"Прямой чат",contactDjinni:"Djinni",contactDjinniHint:"Профессиональный профиль",contactClose:"Закрыть",
-        heroKicker:"Junior PPC Specialist / Performance Systems",heroTitle:"Делаю сигнал понятным. Следующий шаг очевидным.",
-        heroLead:"Работаю с Google Ads, атрибуцией AppsFlyer, регулярной отчётностью и практической автоматизацией. Мой фокус — связь между рекламным кликом и решением, которому команда может доверять.",
-        heroPrimary:"Смотреть PPC-кейсы",heroSecondary:"Начать разговор",heroNote:"Открыт к позициям junior PPC, performance marketing и marketing automation.",photoRole:"PPC / Данные / Автоматизация",
-        problemKicker:"01 / Вопрос рекрутера",problemTitle:"Что происходит, когда цифры активны, но сигнал неправильный?",problemIntro:"Кампания может приносить клики и установки, а команда всё ещё не понимает, что менять дальше. Я помогаю закрывать этот разрыв.",
+        navExperience:"Опыт",navMethod:"Как я работаю",navCases:"Кейсы",navContact:"Контакты",navCta:"Обсудить вакансию",contactModalKicker:"07 / Прямой контакт",contactModalTitle:"Выберите, где со мной связаться.",contactModalText:"Откройте удобную платформу. Ссылка сразу ведёт в мой профиль или чат.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Профессиональный профиль",contactTelegram:"Telegram",contactTelegramHint:"Прямой чат",contactDjinni:"Djinni",contactDjinniHint:"Профессиональный профиль",contactClose:"Закрыть",caseOpen:"Открыть кейс",caseModalKicker:"04 / Детали кейса",caseModalProblem:"Проблема",caseModalApproach:"Подход",caseModalOutput:"Что передано",caseModalProof:"Доказательства",caseModalGuardrail:"Примечание",caseModalClose:"Закрыть",caseFeatureKicker:"Главный кейс по привлечению",caseFeatureTitle:"iOS Utility App / Web-to-App setup",caseFeatureSummary:"Tracking-кейс по привлечению, где главный вопрос — может ли рекламный клик вернуться в систему как достоверный сигнал trial.",caseFeatureProblem:"Путь от рекламного клика до App Store и обратно в рекламную систему требовал понятной карты событий.",caseFeatureApproach:"Подготовил tracking-параметры, OneLink, mapping в AppsFlyer, conversion actions и черновики кампаний.",caseFeatureOutput:"Структурированная подготовка: пять рынков, 14 поисковых тем, дневной тестовый бюджет $50 и draft target CPA $20.",caseFeatureProof:"Доказательства подготовки: пять рынков, 14 тем, draft бюджета $50.",caseFeatureGuardrail:"Это подготовленная система, а не заявленный performance-результат. Следующий этап — валидация tracking.",caseDiagnosticsKicker:"Кейс по данным",caseDiagnosticsTitle:"Диагностика Google Ads и AppsFlyer",caseDiagnosticsSummary:"Проверка качества данных в выгрузках кампаний и assets, чтобы разделить проблемы атрибуции и conversion goals.",caseDiagnosticsProblem:"У команды были цифры, но не было достаточной уверенности, каким сигналам можно доверять при принятии решений.",caseDiagnosticsApproach:"Проверил 13 218 строк assets и 198 кампаний, сравнил поля источников и зафиксировал пробелы.",caseDiagnosticsOutput:"Диагностическая карта с доверенными полями, точками QA и следующими проверками.",caseDiagnosticsProof:"13 218 строк / 198 кампаний.",caseDiagnosticsGuardrail:"Речь об анализе данных и диагностике, а не о заявленном росте выручки.",caseReportingKicker:"Операционный кейс",caseReportingTitle:"Регулярная отчётность по привлечению",caseReportingSummary:"Повторяемый процесс еженедельной и ежемесячной отчётности, созданный для быстрых сравнений, а не ручного копирования.",caseReportingProblem:"Регулярные ревью замедлялись из-за непоследовательных срезов и повторной подготовки.",caseReportingApproach:"Стандартизировал Cost, CPA, D4 ROAS, сравнение географий и проверки QA/источников.",caseReportingOutput:"Source-safe структура для регулярного анализа привлечения.",caseReportingProof:"Еженедельно + ежемесячно / source-safe.",caseReportingGuardrail:"Ценность здесь в повторяемом процессе, а не в выдуманном performance-результате.",caseSupportKicker:"Кейс по автоматизации",caseSupportTitle:"AI Support Copilot",caseSupportSummary:"Workflow с human-in-the-loop, который помогает support готовить более безопасные ответы без автоматической отправки.",caseSupportProblem:"Команда поддержки тратила время на повторяющиеся формулировки и проверку рисков перед каждым ответом.",caseSupportApproach:"Спроектировал Gmail-workflow с утверждёнными шаблонами, risk flags, правками оператора и финальным подтверждением.",caseSupportOutput:"Контролируемый процесс подготовки ответа, где ответственность за отправку остаётся у человека.",caseSupportProof:"5 000+ писем / human-in-loop.",caseSupportGuardrail:"Workflow помогает оператору, но не заменяет его подтверждение.",heroKicker:"Junior Media Buyer / Paid Acquisition Systems",heroTitle:"Делаю сигнал понятным. Следующий шаг очевидным.",
+        heroLead:"Работаю с Meta Ads и Google Ads, атрибуцией AppsFlyer, регулярной отчётностью и практической автоматизацией. Мой фокус — связь между рекламным кликом и решением, которому команда может доверять.",
+        heroPrimary:"Смотреть кейсы по медиабаингу",heroSecondary:"Начать разговор",heroNote:"Открыт к позициям junior Media Buyer и paid acquisition.",photoRole:"PPC / Данные / Автоматизация",
+        problemKicker:"01 / Вопрос рекрутера",problemTitle:"Что происходит, когда платный трафик идёт, но сигнал неправильный?",problemIntro:"Кампания может приносить клики и установки, а команда всё ещё не понимает, что должно получить следующий бюджет. Я помогаю закрыть этот разрыв.",
         problem1Kicker:"Проблема 01",problem1Title:"Установки приходят, но Google Ads получает не то событие.",problem1Text:"Трекинг и mapping конверсий должны связывать рекламный клик с важным действием внутри приложения.",
         problem2Kicker:"Проблема 02",problem2Title:"В отчётах есть цифры, но нет решения.",problem2Text:"Регулярный отчёт должен сохранять исходные данные, показывать CPA и ROAS и облегчать сравнение.",
         problem3Kicker:"Проблема 03",problem3Title:"Поддержка повторяет одну и ту же работу и теряет время.",problem3Text:"Безопасный помощник может подготовить следующий шаг, сохранив контроль и подтверждение человека.",
-        experienceKicker:"02 / Выбранный опыт",experienceTitle:"Практика в привлечении, отчётности и автоматизации.",experienceIntro:"Проектный опыт на основе реальных рабочих процессов, измеримых данных и понятных передач результата. Коммерческие названия намеренно скрыты.",experienceSide:"Я показываю не список разрозненных инструментов, а путь от неясной проблемы к рабочей системе.",
-        exp1Meta:"Проектная работа",exp1Title:"Performance Marketing и PPC Operations",exp1Text:"Подготавливал Search-кампании Google Ads, tracking-параметры, mapping конверсий и планы тестирования для iOS-продукта.",
+        experienceKicker:"02 / Выбранный опыт",experienceTitle:"Практика в paid social, привлечении, отчётности и автоматизации.",experienceIntro:"Проектный опыт на основе реальных рабочих процессов, измеримых данных и понятных передач результата. Коммерческие названия намеренно скрыты.",experienceSide:"Я показываю не список разрозненных инструментов, а путь от неясной проблемы к рабочей системе.",
+        exp1Meta:"Проектная работа",exp1Title:"Медиабаинг и платное привлечение",exp1Text:"Работал с процессами Meta Ads и Google Ads: структура кампаний, tracking-параметры, mapping конверсий и планы тестирования.",
         exp2Meta:"Регулярный процесс",exp2Title:"Маркетинговая отчётность и данные",exp2Text:"Выстроил еженедельные и ежемесячные отчёты с Cost, CPA, D4 ROAS, сравнением географий и проверкой качества.",
         exp3Meta:"Разработка продукта",exp3Title:"Автоматизация поддержки",exp3Text:"Спроектировал AI-процесс, который готовит ответы, применяет утверждённые правила и оставляет подтверждение человеку перед отправкой.",
-        methodKicker:"03 / Как я работаю",methodTitle:"От неясного сигнала к полезному следующему шагу.",methodIntro:"В проектах я придерживаюсь одного ритма: понять сбой, связать данные и сделать результат удобным для команды.",
+        methodKicker:"03 / Как я работаю",methodTitle:"От неясного платного трафика к понятному следующему шагу.",methodIntro:"В проектах я придерживаюсь одного ритма: понять сбой, связать данные и сделать результат удобным для команды.",
         method1Label:"Диагностика",method1Title:"Нахожу место, где ломается логика.",method1Text:"Проверяю цель кампании, источник события, путь атрибуции, поля отчёта и ограничения данных до рекомендации.",
         method2Label:"Связь",method2Title:"Настраиваю передачу сигнала.",method2Text:"Конфигурирую tracking-параметры, OneLink и mapping конверсий, чтобы нужный сигнал прошёл через систему.",
         method3Label:"Результат",method3Title:"Превращаю данные в действие.",method3Text:"Передаю draft кампании, повторяемый отчёт, QA-чеклист или безопасный workflow, которым может пользоваться команда.",
-        casesKicker:"04 / Выбранные проекты",casesTitle:"Четыре проекта. Одна рабочая система.",casesIntro:"Первые кейсы показывают PPC-практику, следующие — аналитическое мышление и привычку автоматизировать повторяющиеся процессы.",
-        featureKicker:"Главный PPC-кейс",featureTitle:"iOS Utility App<br>Web-to-App setup",featureMeta:"01 / Подготовка системы",featureHeadline:"Сохраняю клик. Возвращаю правильную конверсию.",featureText:"Нужно было направить iOS Search-трафик в App Store, сохранить click IDs и вернуть сигнал активного trial в Google Ads.",
+        casesKicker:"04 / Выбранные проекты",casesTitle:"Четыре проекта. Понятный путь от закупки трафика к выводу.",casesIntro:"Первый кейс показывает tracking-настройку Google Ads. Следующие раскрывают данные, отчётность и автоматизацию, которые поддерживают работу медиабайера. Открой любую карточку, чтобы увидеть проблему, подход и доказательства.",
+        featureKicker:"Главный кейс по привлечению",featureTitle:"iOS Utility App<br>Web-to-App setup",featureMeta:"01 / Подготовка системы",featureHeadline:"Сохраняю клик. Возвращаю правильную конверсию.",featureText:"Нужно было направить iOS Search-трафик в App Store, сохранить click IDs и вернуть сигнал активного trial в Google Ads.",
         featureList1:"Настройка Google Ads Web и AppsFlyer",featureList2:"OneLink и tracking-параметры",featureList3:"Conversion action и mapping событий",featureList4:"Поисковые темы и рекламные тексты",featureList5:"Пять целевых рынков",featureList6:"Draft бюджета и target CPA",
-        metric1:"дневной тестовый бюджет",metric2:"target CPA",metric3:"целевых рынка",metric4:"поисковые темы",featureStatus:"Результаты по performance не заявляются. Следующий этап — валидация tracking.",
+        metric1:"дневной тестовый бюджет",metric2:"target CPA",metric3:"целевых рынка",metric4:"поисковые темы",featureStatus:"Это кейс по подготовке системы, а не заявленный performance-результат. Следующий этап — валидация tracking.",
         route1:"Google Search",route2:"AppsFlyer Web",route3:"Trial-сигнал",route4:"Google Ads",
         case2Label:"Данные",case2Title:"Диагностика Google Ads и AppsFlyer",case2Text:"Разделил проблемы атрибуции и conversion goals и зафиксировал, каким данным можно доверять.",case2Proof:"13 218 строк / 198 кампаний ↗",
-        case3Label:"Операции",case3Title:"Регулярная performance-отчётность",case3Text:"Стандартизировал еженедельные и ежемесячные отчёты с Cost, CPA, D4 ROAS, сравнением географий и QA.",case3Proof:"Еженедельно + ежемесячно / source-safe ↗",
+        case3Label:"Операции",case3Title:"Регулярная отчётность по привлечению",case3Text:"Стандартизировал еженедельные и ежемесячные отчёты с Cost, CPA, D4 ROAS, сравнением географий и проверками качества.",case3Proof:"Еженедельно + ежемесячно / source-safe ↗",
         case4Label:"Автоматизация",case4Title:"AI-помощник поддержки",case4Text:"Спроектировал Gmail-workflow для подготовки ответов, утверждённых шаблонов, проверки рисков и подтверждения перед отправкой.",case4Proof:"5 000+ писем / human-in-loop ↗",
         evidenceKicker:"05 / Доказательства",evidenceTitle:"Полезные цифры с понятным контекстом.",evidenceIntro:"Это сигналы проектной работы, а не завышенные рекламные результаты. Каждая цифра показывает, что было проанализировано, подготовлено или передано.",
         proof1:"строк asset-выгрузки Google Ads",proof2:"кампаний проверено в диагностике",proof3:"кампаний в регулярном отчёте",proof4:"писем проанализировано для workflow",
         capabilitiesKicker:"06 / Компетенции",capabilitiesTitle:"Что я могу делать с первого дня.",capabilitiesIntro:"Практичный junior-профиль: умею работать с данными, искать причину и честно отмечать то, что ещё проходит валидацию.",
-        cap1Title:"Настройка кампаний",cap1Text:"Поисковые темы, структура ключей, рекламные тексты, рынки, бюджеты и drafts target CPA.",cap2Title:"Tracking и атрибуция",cap2Text:"AppsFlyer, OneLink, click IDs, mapping событий и conversion signals Google Ads.",
-        cap3Title:"Performance-отчётность",cap3Text:"Еженедельные и ежемесячные отчёты на основе Cost, CPA, D4 ROAS и сравнений.",cap4Title:"Диагностика данных",cap4Text:"Проверка источников, анализ кампаний и assets, ограничения и QA до выводов.",
+        cap1Title:"Настройка Meta Ads",cap1Text:"Структура кампаний, аудитории, креативы, бюджеты, тесты и чек-листы запуска paid social.",cap2Title:"Tracking и атрибуция",cap2Text:"AppsFlyer, OneLink, click IDs, mapping событий и conversion signals Google Ads.",
+        cap3Title:"Отчётность медиабаинга",cap3Text:"Еженедельные и ежемесячные срезы на основе Cost, CPA, D4 ROAS, сравнений и проверки источников.",cap4Title:"Диагностика данных",cap4Text:"Проверка источников, анализ кампаний и assets, ограничения и QA до выводов.",
         cap5Title:"Автоматизация процессов",cap5Text:"Повторяемые процессы, которые уменьшают ручную работу и сохраняют границу подтверждения.",cap6Title:"Product thinking",cap6Text:"Перевожу операционную проблему в протестированный workflow, которым может пользоваться команда.",
-        contactKicker:"07 / Следующий разговор",contactTitle:"Обсудим сигнал, который стоит за кампанией.",contactText:"Ищу позицию junior PPC, performance marketing или marketing automation, где смогу помогать с настройкой кампаний, tracking, отчётностью и системным решением проблем.",contactCta:"Написать Эдуарду",backTop:"Наверх ↑"
+        contactKicker:"07 / Следующий разговор",contactTitle:"Обсудим сигнал, который стоит за кампанией.",contactText:"Ищу позицию junior Media Buyer, где смогу помогать с настройкой кампаний, tracking, отчётностью и системным решением проблем.",contactCta:"Написать Эдуарду",backTop:"Наверх ↑"
       },
       uk: {
-        navExperience:"Досвід",navMethod:"Як я працюю",navCases:"Кейси",navContact:"Контакти",navCta:"Обговорити вакансію",contactModalKicker:"07 / Прямий контакт",contactModalTitle:"Оберіть, де зі мною зв’язатися.",contactModalText:"Відкрийте зручну платформу. Посилання одразу веде до мого профілю або чату.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Професійний профіль",contactTelegram:"Telegram",contactTelegramHint:"Прямий чат",contactDjinni:"Djinni",contactDjinniHint:"Професійний профіль",contactClose:"Закрити",
-        heroKicker:"Junior PPC Specialist / Performance Systems",heroTitle:"Роблю сигнал зрозумілим. Наступний крок очевидним.",
-        heroLead:"Працюю з Google Ads, атрибуцією AppsFlyer, регулярною звітністю та практичною автоматизацією. Мій фокус — зв’язок між рекламним кліком і рішенням, якому команда може довіряти.",
-        heroPrimary:"Дивитися PPC-кейси",heroSecondary:"Почати розмову",heroNote:"Відкритий до позицій junior PPC, performance marketing та marketing automation.",photoRole:"PPC / Дані / Автоматизація",
-        problemKicker:"01 / Питання рекрутера",problemTitle:"Що відбувається, коли цифри активні, але сигнал неправильний?",problemIntro:"Кампанія може приносити кліки та встановлення, а команда все ще не розуміє, що змінювати далі. Я допомагаю закрити цей розрив.",
+        navExperience:"Досвід",navMethod:"Як я працюю",navCases:"Кейси",navContact:"Контакти",navCta:"Обговорити вакансію",contactModalKicker:"07 / Прямий контакт",contactModalTitle:"Оберіть, де зі мною зв’язатися.",contactModalText:"Відкрийте зручну платформу. Посилання одразу веде до мого профілю або чату.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Професійний профіль",contactTelegram:"Telegram",contactTelegramHint:"Прямий чат",contactDjinni:"Djinni",contactDjinniHint:"Професійний профіль",contactClose:"Закрити",caseOpen:"Відкрити кейс",caseModalKicker:"04 / Деталі кейсу",caseModalProblem:"Проблема",caseModalApproach:"Підхід",caseModalOutput:"Що передано",caseModalProof:"Докази",caseModalGuardrail:"Примітка",caseModalClose:"Закрити",caseFeatureKicker:"Головний кейс із залучення",caseFeatureTitle:"iOS Utility App / Web-to-App setup",caseFeatureSummary:"Tracking-кейс із залучення, де головне питання — чи може рекламний клік повернутися в систему як достовірний сигнал trial.",caseFeatureProblem:"Шлях від рекламного кліку до App Store і назад у рекламну систему потребував зрозумілої карти подій.",caseFeatureApproach:"Підготував tracking-параметри, OneLink, mapping в AppsFlyer, conversion actions і чернетки кампаній.",caseFeatureOutput:"Структурована підготовка: п’ять ринків, 14 пошукових тем, денний тестовий бюджет $50 і draft target CPA $20.",caseFeatureProof:"Докази підготовки: п’ять ринків, 14 тем, draft бюджету $50.",caseFeatureGuardrail:"Це підготовлена система, а не заявлений performance-результат. Наступний етап — валідація tracking.",caseDiagnosticsKicker:"Кейс із даними",caseDiagnosticsTitle:"Діагностика Google Ads і AppsFlyer",caseDiagnosticsSummary:"Перевірка якості даних у вивантаженнях кампаній та assets, щоб розділити проблеми атрибуції і conversion goals.",caseDiagnosticsProblem:"У команди були цифри, але не було достатньої впевненості, яким сигналам довіряти під час рішень.",caseDiagnosticsApproach:"Перевірив 13 218 рядків assets і 198 кампаній, порівняв поля джерел і зафіксував прогалини.",caseDiagnosticsOutput:"Діагностична карта з довіреними полями, точками QA і наступними перевірками.",caseDiagnosticsProof:"13 218 рядків / 198 кампаній.",caseDiagnosticsGuardrail:"Йдеться про аналіз даних і діагностику, а не про заявлене зростання виручки.",caseReportingKicker:"Операційний кейс",caseReportingTitle:"Регулярна звітність із залучення",caseReportingSummary:"Повторюваний процес щотижневої та щомісячної звітності, створений для швидких порівнянь, а не ручного копіювання.",caseReportingProblem:"Регулярні рев’ю сповільнювалися через непослідовні зрізи та повторну підготовку.",caseReportingApproach:"Стандартизував Cost, CPA, D4 ROAS, порівняння географій і перевірки QA/джерел.",caseReportingOutput:"Source-safe структура для регулярного аналізу залучення.",caseReportingProof:"Щотижня + щомісяця / source-safe.",caseReportingGuardrail:"Цінність тут у повторюваному процесі, а не у вигаданому performance-результаті.",caseSupportKicker:"Кейс з автоматизації",caseSupportTitle:"AI Support Copilot",caseSupportSummary:"Workflow з human-in-the-loop, який допомагає support готувати безпечніші відповіді без автоматичного відправлення.",caseSupportProblem:"Команда підтримки витрачала час на повторювані формулювання та перевірку ризиків перед кожною відповіддю.",caseSupportApproach:"Спроєктував Gmail-workflow із затвердженими шаблонами, risk flags, правками оператора та фінальним підтвердженням.",caseSupportOutput:"Контрольований процес підготовки відповіді, де відповідальність за відправлення залишається у людини.",caseSupportProof:"5 000+ листів / human-in-loop.",caseSupportGuardrail:"Workflow допомагає оператору, але не замінює його підтвердження.",heroKicker:"Junior Media Buyer / Paid Acquisition Systems",heroTitle:"Роблю сигнал зрозумілим. Наступний крок очевидним.",
+        heroLead:"Працюю з Meta Ads і Google Ads, атрибуцією AppsFlyer, регулярною звітністю та практичною автоматизацією. Мій фокус — зв’язок між рекламним кліком і рішенням, якому команда може довіряти.",
+        heroPrimary:"Дивитися кейси з медіабаїнгу",heroSecondary:"Почати розмову",heroNote:"Відкритий до позицій junior Media Buyer і paid acquisition.",photoRole:"PPC / Дані / Автоматизація",
+        problemKicker:"01 / Питання рекрутера",problemTitle:"Що відбувається, коли платний трафік іде, але сигнал неправильний?",problemIntro:"Кампанія може приносити кліки та встановлення, а команда все ще не розуміє, що має отримати наступний бюджет. Я допомагаю закрити цей розрив.",
         problem1Kicker:"Проблема 01",problem1Title:"Встановлення приходять, але Google Ads отримує не ту подію.",problem1Text:"Трекінг і mapping конверсій мають пов’язувати рекламний клік із важливою дією всередині застосунку.",
         problem2Kicker:"Проблема 02",problem2Title:"У звітах є цифри, але немає рішення.",problem2Text:"Регулярний звіт має зберігати вихідні дані, показувати CPA і ROAS та спрощувати порівняння.",
         problem3Kicker:"Проблема 03",problem3Title:"Підтримка повторює одну й ту саму роботу і втрачає час.",problem3Text:"Безпечний помічник може підготувати наступний крок, зберігаючи контроль і підтвердження людини.",
-        experienceKicker:"02 / Вибраний досвід",experienceTitle:"Практика у залученні, звітності та автоматизації.",experienceIntro:"Проєктний досвід на основі реальних робочих процесів, вимірюваних даних і зрозумілих передач результату. Комерційні назви навмисно приховані.",experienceSide:"Я показую не список розрізнених інструментів, а шлях від неясної проблеми до робочої системи.",
-        exp1Meta:"Проєктна робота",exp1Title:"Performance Marketing і PPC Operations",exp1Text:"Готував Search-кампанії Google Ads, tracking-параметри, mapping конверсій і плани тестування для iOS-продукту.",
+        experienceKicker:"02 / Вибраний досвід",experienceTitle:"Практика у paid social, залученні, звітності та автоматизації.",experienceIntro:"Проєктний досвід на основі реальних робочих процесів, вимірюваних даних і зрозумілих передач результату. Комерційні назви навмисно приховані.",experienceSide:"Я показую не список розрізнених інструментів, а шлях від неясної проблеми до робочої системи.",
+        exp1Meta:"Проєктна робота",exp1Title:"Медіабаїнг і платне залучення",exp1Text:"Працював із процесами Meta Ads і Google Ads: структура кампаній, tracking-параметри, mapping конверсій і плани тестування.",
         exp2Meta:"Регулярний процес",exp2Title:"Маркетингова звітність і дані",exp2Text:"Вибудував щотижневі та щомісячні звіти з Cost, CPA, D4 ROAS, порівнянням географій і перевіркою якості.",
         exp3Meta:"Розробка продукту",exp3Title:"Автоматизація підтримки",exp3Text:"Спроєктував AI-процес, який готує відповіді, застосовує затверджені правила та залишає підтвердження людини перед відправленням.",
-        methodKicker:"03 / Як я працюю",methodTitle:"Від неясного сигналу до корисного наступного кроку.",methodIntro:"У проєктах я дотримуюся одного ритму: зрозуміти збій, поєднати дані та зробити результат зручним для команди.",
+        methodKicker:"03 / Як я працюю",methodTitle:"Від неясного платного трафіку до зрозумілого наступного кроку.",methodIntro:"У проєктах я дотримуюся одного ритму: зрозуміти збій, поєднати дані та зробити результат зручним для команди.",
         method1Label:"Діагностика",method1Title:"Знаходжу місце, де ламається логіка.",method1Text:"Перевіряю ціль кампанії, джерело події, шлях атрибуції, поля звіту й обмеження даних до рекомендації.",
         method2Label:"Зв’язок",method2Title:"Налаштовую передачу сигналу.",method2Text:"Конфігурюю tracking-параметри, OneLink і mapping конверсій, щоб потрібний сигнал пройшов через систему.",
         method3Label:"Результат",method3Title:"Перетворюю дані на дію.",method3Text:"Передаю draft кампанії, повторюваний звіт, QA-чекліст або безпечний workflow, яким може користуватися команда.",
-        casesKicker:"04 / Вибрані проєкти",casesTitle:"Чотири проєкти. Одна робоча система.",casesIntro:"Перші кейси показують PPC-практику, наступні — аналітичне мислення та звичку автоматизувати повторювані процеси.",
-        featureKicker:"Головний PPC-кейс",featureTitle:"iOS Utility App<br>Web-to-App setup",featureMeta:"01 / Підготовка системи",featureHeadline:"Зберігаю клік. Повертаю правильну конверсію.",featureText:"Потрібно було направити iOS Search-трафік в App Store, зберегти click IDs і повернути сигнал активного trial у Google Ads.",
+        casesKicker:"04 / Вибрані проєкти",casesTitle:"Чотири проєкти. Зрозумілий шлях від закупівлі трафіку до висновку.",casesIntro:"Перший кейс показує tracking-налаштування Google Ads. Наступні розкривають дані, звітність і автоматизацію, які підтримують роботу медіабаєра. Відкрий будь-яку картку, щоб побачити проблему, підхід і докази.",
+        featureKicker:"Головний кейс із залучення",featureTitle:"iOS Utility App<br>Web-to-App setup",featureMeta:"01 / Підготовка системи",featureHeadline:"Зберігаю клік. Повертаю правильну конверсію.",featureText:"Потрібно було направити iOS Search-трафік в App Store, зберегти click IDs і повернути сигнал активного trial у Google Ads.",
         featureList1:"Налаштування Google Ads Web і AppsFlyer",featureList2:"OneLink і tracking-параметри",featureList3:"Conversion action і mapping подій",featureList4:"Пошукові теми та рекламні тексти",featureList5:"П’ять цільових ринків",featureList6:"Draft бюджету і target CPA",
-        metric1:"денний тестовий бюджет",metric2:"target CPA",metric3:"цільових ринків",metric4:"пошукових тем",featureStatus:"Результати performance не заявляються. Наступний етап — валідація tracking.",
+        metric1:"денний тестовий бюджет",metric2:"target CPA",metric3:"цільових ринків",metric4:"пошукових тем",featureStatus:"Це кейс із підготовки системи, а не заявлений performance-результат. Наступний етап — валідація tracking.",
         route1:"Google Search",route2:"AppsFlyer Web",route3:"Trial-сигнал",route4:"Google Ads",
         case2Label:"Дані",case2Title:"Діагностика Google Ads і AppsFlyer",case2Text:"Розділив проблеми атрибуції та conversion goals і зафіксував, яким даним можна довіряти.",case2Proof:"13 218 рядків / 198 кампаній ↗",
-        case3Label:"Операції",case3Title:"Регулярна performance-звітність",case3Text:"Стандартизував щотижневі та щомісячні звіти з Cost, CPA, D4 ROAS, порівнянням географій і QA.",case3Proof:"Щотижня + щомісяця / source-safe ↗",
+        case3Label:"Операції",case3Title:"Регулярна звітність із залучення",case3Text:"Стандартизував щотижневі та щомісячні звіти з Cost, CPA, D4 ROAS, порівнянням географій і перевірками якості.",case3Proof:"Щотижня + щомісяця / source-safe ↗",
         case4Label:"Автоматизація",case4Title:"AI-помічник підтримки",case4Text:"Спроєктував Gmail-workflow для підготовки відповідей, затверджених шаблонів, перевірки ризиків і підтвердження перед відправленням.",case4Proof:"5 000+ листів / human-in-loop ↗",
         evidenceKicker:"05 / Докази",evidenceTitle:"Корисні цифри з чітким контекстом.",evidenceIntro:"Це сигнали проєктної роботи, а не завищені рекламні результати. Кожна цифра показує, що було проаналізовано, підготовлено або передано.",
         proof1:"рядків asset-вивантаження Google Ads",proof2:"кампаній перевірено в діагностиці",proof3:"кампаній у регулярному звіті",proof4:"листів проаналізовано для workflow",
         capabilitiesKicker:"06 / Компетенції",capabilitiesTitle:"Що я можу робити з першого дня.",capabilitiesIntro:"Практичний junior-профіль: вмію працювати з даними, шукати причину і чесно позначати те, що ще проходить валідацію.",
-        cap1Title:"Налаштування кампаній",cap1Text:"Пошукові теми, структура ключів, рекламні тексти, ринки, бюджети та drafts target CPA.",cap2Title:"Tracking і атрибуція",cap2Text:"AppsFlyer, OneLink, click IDs, mapping подій і conversion signals Google Ads.",
-        cap3Title:"Performance-звітність",cap3Text:"Щотижневі та щомісячні звіти на основі Cost, CPA, D4 ROAS і порівнянь.",cap4Title:"Діагностика даних",cap4Text:"Перевірка джерел, аналіз кампаній та assets, обмеження і QA до висновків.",
+        cap1Title:"Налаштування Meta Ads",cap1Text:"Структура кампаній, аудиторії, креативи, бюджети, тести та чек-листи запуску paid social.",cap2Title:"Tracking і атрибуція",cap2Text:"AppsFlyer, OneLink, click IDs, mapping подій і conversion signals Google Ads.",
+        cap3Title:"Звітність медіабаїнгу",cap3Text:"Щотижневі та щомісячні зрізи на основі Cost, CPA, D4 ROAS, порівнянь і перевірки джерел.",cap4Title:"Діагностика даних",cap4Text:"Перевірка джерел, аналіз кампаній та assets, обмеження і QA до висновків.",
         cap5Title:"Автоматизація процесів",cap5Text:"Повторювані процеси, які зменшують ручну роботу і зберігають межу підтвердження.",cap6Title:"Product thinking",cap6Text:"Перетворюю операційну проблему на протестований workflow, яким може користуватися команда.",
-        contactKicker:"07 / Наступна розмова",contactTitle:"Обговоримо сигнал, який стоїть за кампанією.",contactText:"Шукаю позицію junior PPC, performance marketing або marketing automation, де зможу допомагати з налаштуванням кампаній, tracking, звітністю та системним вирішенням проблем.",contactCta:"Написати Едуарду",backTop:"Вгору ↑"
+        contactKicker:"07 / Наступна розмова",contactTitle:"Обговоримо сигнал, який стоїть за кампанією.",contactText:"Шукаю позицію junior Media Buyer, де зможу допомагати з налаштуванням кампаній, tracking, звітністю та системним вирішенням проблем.",contactCta:"Написати Едуарду",backTop:"Вгору ↑"
       }
     };
 
+    let activeCaseId = null;
+    const caseData = {
+      feature: { kicker: "caseFeatureKicker", title: "caseFeatureTitle", summary: "caseFeatureSummary", problem: "caseFeatureProblem", approach: "caseFeatureApproach", output: "caseFeatureOutput", proof: "caseFeatureProof", guardrail: "caseFeatureGuardrail" },
+      diagnostics: { kicker: "caseDiagnosticsKicker", title: "caseDiagnosticsTitle", summary: "caseDiagnosticsSummary", problem: "caseDiagnosticsProblem", approach: "caseDiagnosticsApproach", output: "caseDiagnosticsOutput", proof: "caseDiagnosticsProof", guardrail: "caseDiagnosticsGuardrail" },
+      reporting: { kicker: "caseReportingKicker", title: "caseReportingTitle", summary: "caseReportingSummary", problem: "caseReportingProblem", approach: "caseReportingApproach", output: "caseReportingOutput", proof: "caseReportingProof", guardrail: "caseReportingGuardrail" },
+      support: { kicker: "caseSupportKicker", title: "caseSupportTitle", summary: "caseSupportSummary", problem: "caseSupportProblem", approach: "caseSupportApproach", output: "caseSupportOutput", proof: "caseSupportProof", guardrail: "caseSupportGuardrail" }
+    };
+    function renderCaseModal() {
+      if (!activeCaseId) return;
+      const current = caseData[activeCaseId];
+      const dictionary = translations[document.documentElement.lang] || translations.en;
+      document.querySelectorAll('[data-case-field]').forEach((element) => {
+        const key = current[element.dataset.caseField];
+        if (key && dictionary[key] !== undefined) element.textContent = dictionary[key];
+      });
+    }
     const nav = document.querySelector('.site-nav');
     const reveals = document.querySelectorAll('[data-reveal]');
     const observer = new IntersectionObserver((entries) => {
@@ -618,6 +671,7 @@
       });
       document.querySelectorAll('[data-lang]').forEach((button) => button.classList.toggle('active', button.dataset.lang === lang));
       try { localStorage.setItem('site-language', lang); } catch (_) {}
+      renderCaseModal();
     }
 
     document.querySelectorAll('[data-lang]').forEach((button) => button.addEventListener('click', () => applyLanguage(button.dataset.lang)));
@@ -678,6 +732,40 @@
     });
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && !contactModal.hidden) closeContactModal();
+    });
+
+    const caseModal = document.getElementById('case-modal');
+    let lastCaseTrigger = null;
+    function openCaseModal(id, trigger) {
+      activeCaseId = id;
+      lastCaseTrigger = trigger || null;
+      renderCaseModal();
+      caseModal.hidden = false;
+      caseModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      caseModal.querySelector('[data-case-close]')?.focus();
+    }
+    function closeCaseModal() {
+      caseModal.hidden = true;
+      caseModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      lastCaseTrigger?.focus();
+      activeCaseId = null;
+    }
+    document.querySelectorAll('[data-case-open]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openCaseModal(trigger.dataset.caseOpen, trigger));
+      trigger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openCaseModal(trigger.dataset.caseOpen, trigger);
+        }
+      });
+    });
+    caseModal.querySelectorAll('[data-case-close]').forEach((element) => {
+      element.addEventListener('click', closeCaseModal);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !caseModal.hidden) closeCaseModal();
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
