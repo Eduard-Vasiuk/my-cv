@@ -244,10 +244,12 @@
     .contact-modal[hidden] { display: none; }
     .contact-modal { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 22px; background: rgba(16,17,20,.72); backdrop-filter: blur(14px); }
     .contact-modal-backdrop { position: absolute; inset: 0; cursor: pointer; }
-    .contact-dialog { position: relative; z-index: 1; width: min(100%, 560px); padding: 34px; border: 1px solid var(--line-dark); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.35); }
-    .contact-close { position: absolute; top: 14px; right: 16px; width: 38px; height: 38px; border: 1px solid var(--line-dark); border-radius: 50%; background: transparent; color: var(--ink); font-size: 1.5rem; line-height: 1; cursor: pointer; }
-    .contact-close:hover { background: var(--ink); color: var(--paper); }
-    .contact-dialog h2 { max-width: 430px; margin: 18px 44px 12px 0; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: .94; letter-spacing: -.075em; }
+    .contact-dialog { position: relative; z-index: 1; width: min(100%, 560px); padding: 28px 30px 30px; border: 1px solid var(--line-dark); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.35); }
+    .contact-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 25px; }
+    .contact-dialog-head .mono { padding-top: 9px; }
+    .contact-close { position: static; flex: 0 0 42px; width: 42px; height: 42px; border: 1px solid var(--line-dark); border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 1.45rem; line-height: 1; cursor: pointer; }
+    .contact-close:hover { background: var(--acid); color: var(--ink); }
+    .contact-dialog h2 { max-width: 470px; margin: 0 0 14px; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: .94; letter-spacing: -.075em; }
     .contact-dialog > p { max-width: 440px; margin: 0 0 24px; color: var(--ink-muted); }
     .contact-options { display: grid; gap: 10px; }
     .contact-option { display: grid; grid-template-columns: 42px 1fr auto; gap: 13px; align-items: center; padding: 14px 16px; border: 1px solid var(--line-dark); border-radius: 14px; color: var(--ink); transition: transform .2s ease, background .2s ease; }
@@ -257,7 +259,7 @@
     .contact-option-copy strong { font-size: 1rem; }
     .contact-option-copy small { margin-top: 2px; color: var(--ink-muted); font-size: .8rem; }
     .contact-arrow { font-size: 1.25rem; }
-    @media (max-width: 600px) { .contact-dialog { padding: 28px 20px 20px; } .contact-dialog h2 { margin-right: 34px; } }
+    @media (max-width: 600px) { .contact-dialog { padding: 22px 20px 20px; } .contact-dialog-head { margin-bottom: 21px; } .contact-dialog-head .mono { padding-top: 8px; } .contact-close { flex-basis: 40px; width: 40px; height: 40px; } }
     [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
     [data-reveal].visible { opacity: 1; transform: none; }
     @media (max-width: 900px) {
@@ -478,8 +480,10 @@
   <div class="contact-modal" id="contact-modal" hidden aria-hidden="true">
     <div class="contact-modal-backdrop" data-contact-close></div>
     <section class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
-      <button class="contact-close" type="button" data-contact-close aria-label="Close">×</button>
-      <div class="mono" data-i18n="contactModalKicker">07 / Direct contact</div>
+      <div class="contact-dialog-head">
+        <div class="mono" data-i18n="contactModalKicker">07 / Direct contact</div>
+        <button class="contact-close" type="button" data-contact-close aria-label="Close">×</button>
+      </div>
       <h2 id="contact-modal-title" data-i18n="contactModalTitle">Choose where to contact me.</h2>
       <p data-i18n="contactModalText">Open the platform you use most. Each link takes you directly to my profile or chat.</p>
       <div class="contact-options">
