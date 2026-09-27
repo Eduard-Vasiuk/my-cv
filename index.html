@@ -240,6 +240,16 @@
     footer { background: var(--acid); color: var(--ink); padding: 20px 0 34px; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(23,24,27,.2); font-size: .84rem; }
     .footer-links { display: flex; gap: 20px; }
+    :root { --flow-shift: 0px; --flow-shift-back: 0px; }
+    .flow-section { position: relative; isolation: isolate; background-image: radial-gradient(ellipse 44% 34% at calc(13% + var(--flow-shift)) 15%, rgba(196,243,106,.08), transparent 72%), linear-gradient(132deg, rgba(196,243,106,.045), transparent 42%); background-repeat: no-repeat; }
+    .flow-transition { overflow: visible; }
+    .flow-transition::before, .flow-transition::after { content: ""; position: absolute; left: -4vw; width: 108vw; height: 178px; pointer-events: none; }
+    .flow-transition::before { top: -126px; z-index: 0; background: var(--transition-current); clip-path: polygon(0 64%, 100% 0, 100% 100%, 0 100%); transform: translate3d(var(--flow-shift), 0, 0); will-change: transform; }
+    .flow-transition::after { top: -126px; z-index: 0; background: linear-gradient(90deg, #596d38, var(--acid) 48%, #596d38); opacity: .78; clip-path: polygon(0 76%, 100% 15%, 100% 21%, 0 82%); transform: translate3d(var(--flow-shift-back), 0, 0); will-change: transform; }
+    .flow-from-light { --transition-current: var(--bg); }
+    .flow-from-dark { --transition-current: #e9e5dc; }
+    .flow-from-dark-acid { --transition-current: var(--acid); }
+    .flow-transition > .wrap { position: relative; z-index: 1; }
     .modal-open { overflow: hidden; }
     .contact-modal[hidden] { display: none; }
     .contact-modal { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 22px; background: rgba(16,17,20,.72); backdrop-filter: blur(14px); }
@@ -374,7 +384,7 @@
       <div class="marquee-track mono">Google Ads <span>●</span> AppsFlyer <span>●</span> Performance Reporting <span>●</span> Marketing Automation <span>●</span> Google Ads <span>●</span> AppsFlyer <span>●</span> Performance Reporting <span>●</span> Marketing Automation <span>●</span></div>
     </div>
 
-    <section id="problem" class="paper-section">
+    <section id="problem" class="paper-section flow-transition flow-from-dark flow-section">
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="problemKicker">01 / The recruiter question</div>
@@ -388,7 +398,7 @@
       </div>
     </section>
 
-    <section id="experience" class="experience-section">
+    <section id="experience" class="experience-section flow-section">
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="experienceKicker">02 / Selected experience</div>
@@ -405,7 +415,7 @@
       </div>
     </section>
 
-    <section id="method" class="dark-section">
+    <section id="method" class="dark-section flow-transition flow-from-light flow-section">
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="methodKicker">03 / How I work</div>
@@ -419,7 +429,7 @@
       </div>
     </section>
 
-    <section id="cases" class="cases-section">
+    <section id="cases" class="cases-section flow-transition flow-from-dark flow-section">
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="casesKicker">04 / Selected work</div>
@@ -461,7 +471,7 @@
       </div>
     </section>
 
-    <section class="dark-section">
+    <section class="dark-section flow-transition flow-from-light flow-section">
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="evidenceKicker">05 / Evidence</div>
@@ -476,7 +486,7 @@
       </div>
     </section>
 
-    <section class="dark-section">
+    <section class="dark-section flow-section">
       <div class="wrap">
         <div class="section-head" data-reveal>
           <div class="mono eyebrow" data-i18n="capabilitiesKicker">06 / Capabilities</div>
@@ -493,7 +503,7 @@
       </div>
     </section>
 
-    <section id="contact" class="cta-section">
+    <section id="contact" class="cta-section flow-transition flow-from-dark-acid flow-section">
       <div class="wrap cta-grid">
         <div data-reveal><div class="mono" data-i18n="contactKicker">07 / Next conversation</div><h2 data-i18n="contactTitle">Let’s talk about the signal behind the campaign.</h2></div>
         <div data-reveal><p data-i18n="contactText">I am looking for a junior PPC, performance marketing or marketing automation role where I can contribute to campaign setup, tracking, reporting and structured problem solving.</p><a class="button button-primary" href="#contact" data-contact-open><span data-i18n="contactCta">Contact Eduard</span> <span>↗</span></a></div>
@@ -654,6 +664,26 @@
         if (key && dictionary[key] !== undefined) element.textContent = dictionary[key];
       });
     }
+    const flowRoot = document.documentElement;
+    let flowFrame = null;
+    const reduceFlowMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function updateFlowBackground() {
+      if (reduceFlowMotion.matches) {
+        flowRoot.style.setProperty('--flow-shift', '0px');
+        flowRoot.style.setProperty('--flow-shift-back', '0px');
+        return;
+      }
+      const shift = ((window.scrollY * .09) % 110) - 55;
+      flowRoot.style.setProperty('--flow-shift', shift.toFixed(1) + 'px');
+      flowRoot.style.setProperty('--flow-shift-back', (-shift * .55).toFixed(1) + 'px');
+      flowFrame = null;
+    }
+    window.addEventListener('scroll', () => {
+      if (flowFrame === null) flowFrame = requestAnimationFrame(updateFlowBackground);
+    }, { passive: true });
+    reduceFlowMotion.addEventListener?.('change', updateFlowBackground);
+    updateFlowBackground();
+
     const nav = document.querySelector('.site-nav');
     const reveals = document.querySelectorAll('[data-reveal]');
     const observer = new IntersectionObserver((entries) => {
