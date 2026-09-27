@@ -240,6 +240,24 @@
     footer { background: var(--acid); color: var(--ink); padding: 20px 0 34px; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(23,24,27,.2); font-size: .84rem; }
     .footer-links { display: flex; gap: 20px; }
+    .modal-open { overflow: hidden; }
+    .contact-modal[hidden] { display: none; }
+    .contact-modal { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 22px; background: rgba(16,17,20,.72); backdrop-filter: blur(14px); }
+    .contact-modal-backdrop { position: absolute; inset: 0; cursor: pointer; }
+    .contact-dialog { position: relative; z-index: 1; width: min(100%, 560px); padding: 34px; border: 1px solid var(--line-dark); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.35); }
+    .contact-close { position: absolute; top: 14px; right: 16px; width: 38px; height: 38px; border: 1px solid var(--line-dark); border-radius: 50%; background: transparent; color: var(--ink); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+    .contact-close:hover { background: var(--ink); color: var(--paper); }
+    .contact-dialog h2 { max-width: 430px; margin: 18px 44px 12px 0; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: .94; letter-spacing: -.075em; }
+    .contact-dialog > p { max-width: 440px; margin: 0 0 24px; color: var(--ink-muted); }
+    .contact-options { display: grid; gap: 10px; }
+    .contact-option { display: grid; grid-template-columns: 42px 1fr auto; gap: 13px; align-items: center; padding: 14px 16px; border: 1px solid var(--line-dark); border-radius: 14px; color: var(--ink); transition: transform .2s ease, background .2s ease; }
+    .contact-option:hover { transform: translateX(4px); background: var(--acid); }
+    .contact-badge { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--acid); font: 700 .78rem/1 "SFMono-Regular", Consolas, monospace; letter-spacing: -.04em; }
+    .contact-option-copy strong, .contact-option-copy small { display: block; }
+    .contact-option-copy strong { font-size: 1rem; }
+    .contact-option-copy small { margin-top: 2px; color: var(--ink-muted); font-size: .8rem; }
+    .contact-arrow { font-size: 1.25rem; }
+    @media (max-width: 600px) { .contact-dialog { padding: 28px 20px 20px; } .contact-dialog h2 { margin-right: 34px; } }
     [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
     [data-reveal].visible { opacity: 1; transform: none; }
     @media (max-width: 900px) {
@@ -293,7 +311,7 @@
         <a href="#method" data-i18n="navMethod">How I work</a>
         <a href="#cases" data-i18n="navCases">Cases</a>
         <a href="#contact" data-i18n="navContact">Contact</a>
-        <a class="nav-cta" href="mailto:edvard1256@gmail.com" data-i18n="navCta">Discuss a role</a>
+        <a class="nav-cta" href="#contact" data-contact-open data-i18n="navCta">Discuss a role</a>
       </div>
       <div class="language-switcher" aria-label="Language switcher">
         <button type="button" data-lang="ru">RU</button>
@@ -312,7 +330,7 @@
           <p class="hero-lead" data-i18n="heroLead">I work across Google Ads, AppsFlyer attribution, recurring performance reporting and practical automation. My focus is the space between a campaign click and a decision the team can trust.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#cases"><span data-i18n="heroPrimary">See PPC cases</span> <span>↘</span></a>
-            <a class="button button-secondary" href="#contact" data-i18n="heroSecondary">Start a conversation</a>
+            <a class="button button-secondary" href="#contact" data-contact-open data-i18n="heroSecondary">Start a conversation</a>
           </div>
           <div class="hero-note"><span class="pulse"></span><span data-i18n="heroNote">Open to junior PPC, performance marketing and marketing automation roles.</span></div>
         </div>
@@ -450,17 +468,32 @@
     <section id="contact" class="cta-section">
       <div class="wrap cta-grid">
         <div data-reveal><div class="mono" data-i18n="contactKicker">07 / Next conversation</div><h2 data-i18n="contactTitle">Let’s talk about the signal behind the campaign.</h2></div>
-        <div data-reveal><p data-i18n="contactText">I am looking for a junior PPC, performance marketing or marketing automation role where I can contribute to campaign setup, tracking, reporting and structured problem solving.</p><a class="button button-primary" href="mailto:edvard1256@gmail.com"><span data-i18n="contactCta">Contact Eduard</span> <span>↗</span></a></div>
+        <div data-reveal><p data-i18n="contactText">I am looking for a junior PPC, performance marketing or marketing automation role where I can contribute to campaign setup, tracking, reporting and structured problem solving.</p><a class="button button-primary" href="#contact" data-contact-open><span data-i18n="contactCta">Contact Eduard</span> <span>↗</span></a></div>
       </div>
     </section>
   </main>
 
   <footer><div class="wrap"><div class="footer-row"><span>© <span id="year"></span> Eduard Vasyuk</span><div class="footer-links"><a href="https://github.com/Eduard-Vasiuk" target="_blank" rel="noreferrer">GitHub</a><a href="mailto:edvard1256@gmail.com">Email</a><a href="#top" data-i18n="backTop">Back to top ↑</a></div></div></div></footer>
 
+  <div class="contact-modal" id="contact-modal" hidden aria-hidden="true">
+    <div class="contact-modal-backdrop" data-contact-close></div>
+    <section class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <button class="contact-close" type="button" data-contact-close aria-label="Close">×</button>
+      <div class="mono" data-i18n="contactModalKicker">07 / Direct contact</div>
+      <h2 id="contact-modal-title" data-i18n="contactModalTitle">Choose where to contact me.</h2>
+      <p data-i18n="contactModalText">Open the platform you use most. Each link takes you directly to my profile or chat.</p>
+      <div class="contact-options">
+        <a class="contact-option" href="https://linkedin.com/in/mrEduardVasyuk" target="_blank" rel="noopener noreferrer"><span class="contact-badge" aria-hidden="true">in</span><span class="contact-option-copy"><strong data-i18n="contactLinkedIn">LinkedIn</strong><small data-i18n="contactLinkedInHint">Professional profile</small></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-option" href="https://t.me/Media_buyer_Ed" target="_blank" rel="noopener noreferrer"><span class="contact-badge" aria-hidden="true">TG</span><span class="contact-option-copy"><strong data-i18n="contactTelegram">Telegram</strong><small data-i18n="contactTelegramHint">Direct chat</small></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-option" href="https://djinni.co/my/profile/" target="_blank" rel="noopener noreferrer"><span class="contact-badge" aria-hidden="true">DJ</span><span class="contact-option-copy"><strong data-i18n="contactDjinni">Djinni</strong><small data-i18n="contactDjinniHint">Professional profile</small></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </div>
+
   <script>
     const translations = {
       en: {
-        navExperience:"Experience",navMethod:"How I work",navCases:"Cases",navContact:"Contact",navCta:"Discuss a role",
+        navExperience:"Experience",navMethod:"How I work",navCases:"Cases",navContact:"Contact",navCta:"Discuss a role",contactModalKicker:"07 / Direct contact",contactModalTitle:"Choose where to contact me.",contactModalText:"Open the platform you use most. Each link takes you directly to my profile or chat.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Professional profile",contactTelegram:"Telegram",contactTelegramHint:"Direct chat",contactDjinni:"Djinni",contactDjinniHint:"Professional profile",contactClose:"Close",
         heroKicker:"Junior PPC Specialist / Performance Systems",heroTitle:"Make the signal clear. Make the next move obvious.",
         heroLead:"I work across Google Ads, AppsFlyer attribution, recurring performance reporting and practical automation. My focus is the space between a campaign click and a decision the team can trust.",
         heroPrimary:"See PPC cases",heroSecondary:"Start a conversation",heroNote:"Open to junior PPC, performance marketing and marketing automation roles.",photoRole:"PPC / Data / Automation",
@@ -493,7 +526,7 @@
         contactKicker:"07 / Next conversation",contactTitle:"Let’s talk about the signal behind the campaign.",contactText:"I am looking for a junior PPC, performance marketing or marketing automation role where I can contribute to campaign setup, tracking, reporting and structured problem solving.",contactCta:"Contact Eduard",backTop:"Back to top ↑"
       },
       ru: {
-        navExperience:"Опыт",navMethod:"Как я работаю",navCases:"Кейсы",navContact:"Контакты",navCta:"Обсудить вакансию",
+        navExperience:"Опыт",navMethod:"Как я работаю",navCases:"Кейсы",navContact:"Контакты",navCta:"Обсудить вакансию",contactModalKicker:"07 / Прямой контакт",contactModalTitle:"Выберите, где со мной связаться.",contactModalText:"Откройте удобную платформу. Ссылка сразу ведёт в мой профиль или чат.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Профессиональный профиль",contactTelegram:"Telegram",contactTelegramHint:"Прямой чат",contactDjinni:"Djinni",contactDjinniHint:"Профессиональный профиль",contactClose:"Закрыть",
         heroKicker:"Junior PPC Specialist / Performance Systems",heroTitle:"Делаю сигнал понятным. Следующий шаг очевидным.",
         heroLead:"Работаю с Google Ads, атрибуцией AppsFlyer, регулярной отчётностью и практической автоматизацией. Мой фокус — связь между рекламным кликом и решением, которому команда может доверять.",
         heroPrimary:"Смотреть PPC-кейсы",heroSecondary:"Начать разговор",heroNote:"Открыт к позициям junior PPC, performance marketing и marketing automation.",photoRole:"PPC / Данные / Автоматизация",
@@ -526,7 +559,7 @@
         contactKicker:"07 / Следующий разговор",contactTitle:"Обсудим сигнал, который стоит за кампанией.",contactText:"Ищу позицию junior PPC, performance marketing или marketing automation, где смогу помогать с настройкой кампаний, tracking, отчётностью и системным решением проблем.",contactCta:"Написать Эдуарду",backTop:"Наверх ↑"
       },
       uk: {
-        navExperience:"Досвід",navMethod:"Як я працюю",navCases:"Кейси",navContact:"Контакти",navCta:"Обговорити вакансію",
+        navExperience:"Досвід",navMethod:"Як я працюю",navCases:"Кейси",navContact:"Контакти",navCta:"Обговорити вакансію",contactModalKicker:"07 / Прямий контакт",contactModalTitle:"Оберіть, де зі мною зв’язатися.",contactModalText:"Відкрийте зручну платформу. Посилання одразу веде до мого профілю або чату.",contactLinkedIn:"LinkedIn",contactLinkedInHint:"Професійний профіль",contactTelegram:"Telegram",contactTelegramHint:"Прямий чат",contactDjinni:"Djinni",contactDjinniHint:"Професійний профіль",contactClose:"Закрити",
         heroKicker:"Junior PPC Specialist / Performance Systems",heroTitle:"Роблю сигнал зрозумілим. Наступний крок очевидним.",
         heroLead:"Працюю з Google Ads, атрибуцією AppsFlyer, регулярною звітністю та практичною автоматизацією. Мій фокус — зв’язок між рекламним кліком і рішенням, якому команда може довіряти.",
         heroPrimary:"Дивитися PPC-кейси",heroSecondary:"Почати розмову",heroNote:"Відкритий до позицій junior PPC, performance marketing та marketing automation.",photoRole:"PPC / Дані / Автоматизація",
@@ -615,6 +648,34 @@
       });
     }, { threshold: .45 });
     counters.forEach((counter) => counterObserver.observe(counter));
+
+    const contactModal = document.getElementById('contact-modal');
+    const contactOpeners = document.querySelectorAll('[data-contact-open]');
+    let lastContactTrigger = null;
+    function openContactModal(trigger) {
+      lastContactTrigger = trigger || null;
+      contactModal.hidden = false;
+      contactModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      contactModal.querySelector('.contact-option')?.focus();
+    }
+    function closeContactModal() {
+      contactModal.hidden = true;
+      contactModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      lastContactTrigger?.focus();
+    }
+    contactOpeners.forEach((trigger) => trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openContactModal(trigger);
+    }));
+    contactModal.querySelectorAll('[data-contact-close]').forEach((element) => {
+      element.addEventListener('click', closeContactModal);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !contactModal.hidden) closeContactModal();
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
