@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eduard-vasiuk.github.io/my-cv/sitemap.xml
