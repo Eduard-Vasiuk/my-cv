@@ -433,6 +433,10 @@
       .hero-actions .button { width: 100%; }
       .system-card { padding: 16px; }
       .case-body { padding: 28px 22px; }
+      .case-visual { min-height: auto; padding: 28px 22px 24px; }
+      .case-visual h3 { max-width: none; font-size: clamp(2.1rem, 10.5vw, 3rem); line-height: .98; margin: 20px 0 0; }
+      .case-route { position: relative; left: auto; right: auto; bottom: auto; margin-top: 28px; }
+      .route-item { padding: 11px 12px; }
       .case-list, .capability-grid { grid-template-columns: 1fr; }
       .metrics { grid-template-columns: repeat(2, 1fr); }
       .metric:nth-child(2) { border-right: 0; }
@@ -559,7 +563,7 @@
         <article class="case-feature case-trigger" data-case-open="feature" data-reveal tabindex="0" role="button" aria-haspopup="dialog">
           <div class="case-visual">
             <div class="mono eyebrow" data-i18n="featureKicker">Featured acquisition case</div>
-            <h3 data-i18n="featureTitle">iOS Utility App<br>Web-to-App setup</h3>
+            <h3 data-i18n-html="featureTitle">iOS Utility App<br>Web-to-App setup</h3>
             <div class="case-route">
               <div class="route-item"><span data-i18n="route1">Google Search</span><b>→</b></div>
               <div class="route-item"><span data-i18n="route2">AppsFlyer Web</span><b>→</b></div>
