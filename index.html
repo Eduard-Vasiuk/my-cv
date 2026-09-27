@@ -802,22 +802,24 @@
       }
       const scale = Number.parseFloat(getComputedStyle(flowRoot).getPropertyValue('--flow-motion-scale')) || 1;
       const scroll = window.scrollY;
-      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      const progress = Math.min(1, Math.max(0, scroll / maxScroll));
-      const easedProgress = progress * progress * (3 - 2 * progress);
-      const shift = ((((scroll * .18) % 220) - 110) * scale);
-      const driftY = ((((scroll * .08) % 64) - 32) * scale);
-      const orbX = ((((scroll * .26) % 520) - 260) * scale);
-      const orbY = ((((scroll * .15) % 320) - 160) * scale);
-      const skew = ((((scroll * .025) % 5) - 2.5) * scale);
+      // Continuous sine waves keep the diagonal transition looped without the
+      // visible snap caused by modulo arithmetic at the cycle boundary.
+      const loopPhase = scroll * .0034;
+      const slowPhase = loopPhase * .58 + .75;
+      const shift = Math.sin(loopPhase) * 220 * scale;
+      const driftY = Math.sin(slowPhase) * 28 * scale;
+      const orbX = Math.sin(loopPhase * .58 + 1.4) * 260 * scale;
+      const orbY = Math.cos(loopPhase * .75) * 160 * scale;
+      const skew = Math.sin(loopPhase * .45) * 2.5 * scale;
       flowRoot.style.setProperty('--flow-shift', shift.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-shift-back', (-shift * .55).toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-drift-y', driftY.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-orb-x', orbX.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-orb-y', orbY.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-skew', skew.toFixed(2) + 'deg');
-      flowRoot.style.setProperty('--flow-line-y', (easedProgress * 46 * scale).toFixed(1) + 'px');
-      if (!hasScrollTimeline) flowRoot.style.setProperty('--flow-css-drift', (orbX * .08).toFixed(1) + 'px');
+      const lineY = (0.5 + 0.5 * Math.sin(slowPhase - Math.PI / 2)) * 46 * scale;
+      flowRoot.style.setProperty('--flow-line-y', lineY.toFixed(1) + 'px');
+      if (!hasScrollTimeline) flowRoot.style.setProperty('--flow-css-drift', (Math.sin(loopPhase * .35) * 64 * scale).toFixed(1) + 'px');
       flowFrame = null;
     }
     window.addEventListener('scroll', () => {
