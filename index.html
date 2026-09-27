@@ -40,7 +40,7 @@
     .experience-intro { max-width: 390px; color: var(--ink-muted); font-size: 1.08rem; }
     .experience-list { border-top: 1px solid var(--line-dark); }
     .experience-item { display: grid; grid-template-columns: 125px 1fr; gap: 28px; padding: 26px 0; border-bottom: 1px solid var(--line-dark); }
-    .experience-item .mono { color: #6e5adc; }
+    .experience-item .mono { color: #6354c7; }
     .experience-item h3 { margin: 0 0 7px; font-size: 1.35rem; letter-spacing: -.04em; }
     .experience-item p { margin: 0; color: var(--ink-muted); }
     .experience-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
@@ -93,6 +93,9 @@
     .eyebrow { color: var(--acid); }
     .muted { color: var(--paper-muted); }
     .accent { color: var(--acid); }
+    .paper-section .eyebrow,
+    .experience-section .eyebrow,
+    .cases-section .eyebrow { color: #556b2f; }
     .site-nav {
       position: fixed;
       z-index: 10;
@@ -179,7 +182,7 @@
     .problem { padding: 28px 24px 8px 0; border-right: 1px solid var(--line-dark); }
     .problem:not(:first-child) { padding-left: 24px; }
     .problem:last-child { border-right: 0; }
-    .problem-index { color: #7765e8; }
+    .problem-index { color: #6354c7; }
     .problem h3 { font-size: 1.25rem; margin: 22px 0 12px; letter-spacing: -.03em; }
     .problem p { color: var(--ink-muted); margin: 0; max-width: 300px; }
     .dark-head { color: var(--paper); }
@@ -201,26 +204,26 @@
     .route-item { border: 1px solid var(--line); padding: 12px 14px; display: flex; justify-content: space-between; color: var(--paper-muted); }
     .route-item b { color: var(--acid); font-weight: 500; }
     .case-body { padding: 34px 38px; }
-    .case-kicker { color: #6e5adc; }
+    .case-kicker { color: #6354c7; }
     .case-body h3 { font-size: 2.3rem; line-height: 1; letter-spacing: -.06em; margin: 14px 0 18px; }
     .case-body > p { color: var(--ink-muted); max-width: 600px; }
     .case-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 26px; margin: 26px 0 30px; padding: 0; list-style: none; }
     .case-list li { font-size: .94rem; display: flex; gap: 8px; align-items: baseline; }
-    .case-list li::before { content: "↗"; color: #6e5adc; }
+    .case-list li::before { content: "↗"; color: #6354c7; }
     .metrics { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); margin-top: 22px; }
     .metric { padding: 18px 14px 18px 0; border-right: 1px solid var(--line-dark); }
     .metric:not(:first-child) { padding-left: 14px; }
     .metric:last-child { border-right: 0; }
     .metric strong { display: block; font-size: 1.55rem; letter-spacing: -.05em; }
     .metric span { display: block; color: var(--ink-muted); font-size: .76rem; margin-top: 4px; }
-    .status { display: inline-flex; margin-top: 26px; padding: 7px 10px; border: 1px solid rgba(110,90,218,.28); color: #6e5adc; font-size: .74rem; }
+    .status { display: inline-flex; margin-top: 26px; padding: 7px 10px; border: 1px solid rgba(110,90,218,.28); color: #6354c7; font-size: .74rem; }
     .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .case-card { background: #f3f0e9; border: 1px solid var(--line-dark); padding: 28px; min-height: 360px; display: flex; flex-direction: column; }
     .case-card:hover { transform: translateY(-4px); transition: transform .2s ease; }
-    .case-card .case-card-number { color: #6e5adc; }
+    .case-card .case-card-number { color: #6354c7; }
     .case-card h3 { margin: 58px 0 12px; font-size: 1.55rem; line-height: 1.05; letter-spacing: -.05em; }
     .case-card p { color: var(--ink-muted); margin: 0; }
-    .case-card-footer { margin-top: auto; padding-top: 26px; color: #6e5adc; }
+    .case-card-footer { margin-top: auto; padding-top: 26px; color: #6354c7; }
     .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .proof { padding: 28px 18px 28px 0; border-right: 1px solid var(--line); }
     .proof:not(:first-child) { padding-left: 18px; }
@@ -380,18 +383,18 @@
     .case-feature.case-trigger:hover { transform: translateY(-3px); box-shadow: 0 18px 42px rgba(23,24,27,.12); }
     .case-card.case-trigger { text-align: left; transition: transform .2s ease, box-shadow .2s ease; }
     .case-card.case-trigger:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(23,24,27,.10); }
-    .case-open-hint { display: inline-flex; gap: 8px; align-items: center; margin-top: 18px; color: #6e5adc; }
+    .case-open-hint { display: inline-flex; gap: 8px; align-items: center; margin-top: 18px; color: #6354c7; }
     .case-modal[hidden] { display: none; }
     .case-modal { position: fixed; inset: 0; z-index: 45; display: grid; place-items: center; padding: 22px; background: rgba(16,17,20,.72); backdrop-filter: blur(14px); }
     .case-modal-backdrop { position: absolute; inset: 0; cursor: pointer; }
     .case-dialog { position: relative; z-index: 1; width: min(100%, 760px); max-height: min(720px, calc(100vh - 44px)); overflow: auto; padding: 30px; border: 1px solid var(--line-dark); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.35); }
     .case-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
-    .case-dialog-head .mono { padding-top: 9px; color: #6e5adc; }
+    .case-dialog-head .mono { padding-top: 9px; color: #6354c7; }
     .case-dialog h2 { max-width: 620px; margin: 0 0 14px; font-size: clamp(2.3rem, 6vw, 5rem); line-height: .92; letter-spacing: -.08em; }
     .case-dialog-summary { max-width: 640px; margin: 0 0 28px; color: var(--ink-muted); font-size: 1.05rem; }
     .case-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .case-detail-card { padding: 18px; border: 1px solid var(--line-dark); border-radius: 14px; }
-    .case-detail-card .mono { color: #6e5adc; }
+    .case-detail-card .mono { color: #6354c7; }
     .case-detail-card p { margin: 12px 0 0; color: var(--ink-muted); font-size: .92rem; }
     .case-dialog-proof { display: grid; gap: 6px; margin-top: 16px; padding: 18px; border-radius: 14px; background: var(--ink); color: var(--paper); }
     .case-dialog-proof strong { color: var(--acid); font-size: 1.05rem; }
