@@ -268,7 +268,7 @@
     .flow-surface {
       position: absolute;
       z-index: 0;
-      inset: -8%;
+      inset: 0;
       pointer-events: none;
       overflow: hidden;
       opacity: .34;
@@ -311,7 +311,7 @@
     .experience-section .flow-surface { opacity: .2; mix-blend-mode: multiply; }
     .cta-section .flow-surface { opacity: .16; mix-blend-mode: multiply; }
     .flow-section > .wrap { position: relative; z-index: 1; }
-    .flow-transition { overflow: visible; }
+    .flow-transition { overflow-x: clip; overflow-y: visible; }
     .flow-transition::before, .flow-transition::after {
       content: "";
       position: absolute;
