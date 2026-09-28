@@ -316,39 +316,48 @@
     .experience-section .flow-surface { opacity: .26; mix-blend-mode: multiply; }
     .cta-section .flow-surface { opacity: .18; mix-blend-mode: multiply; }
     .flow-section > .wrap { position: relative; z-index: 1; }
-    .flow-transition { z-index: 2; overflow-x: clip; overflow-y: visible; }
+    .flow-transition {
+      z-index: 2;
+      overflow-x: clip;
+      overflow-y: visible;
+      background-color: var(--transition-next, var(--bg));
+      background-image:
+        linear-gradient(154deg, var(--transition-current, var(--bg)) 0%, var(--transition-current, var(--bg)) 3%, var(--transition-next, var(--bg)) 21%, var(--transition-next, var(--bg)) 100%),
+        radial-gradient(ellipse 52% 42% at calc(12% + var(--flow-orb-x)) calc(8% + var(--flow-orb-y)), rgba(196,243,106,.09), transparent 72%),
+        linear-gradient(132deg, rgba(196,243,106,.045), transparent 42%);
+      background-repeat: no-repeat;
+    }
     .flow-transition::before, .flow-transition::after {
       content: "";
       position: absolute;
       left: -10%;
       width: 120%;
-      height: 250px;
+      height: 120px;
       pointer-events: none;
     }
     .flow-transition::before {
-      top: calc(-190px + var(--flow-line-y));
+      top: calc(-34px + var(--flow-line-y));
       z-index: 0;
-      background: var(--transition-current);
-      clip-path: polygon(0 62%, 100% 16%, 100% 100%, 0 100%);
-      filter: blur(14px);
-      opacity: .82;
+      background: linear-gradient(132deg, transparent 12%, rgba(196,243,106,.16) 44%, rgba(196,243,106,.06) 62%, transparent 88%);
+      clip-path: polygon(0 58%, 100% 12%, 100% 64%, 0 100%);
+      filter: blur(16px);
+      opacity: .78;
       transform: translate3d(var(--flow-shift), var(--flow-drift-y), 0);
       will-change: transform;
     }
     .flow-transition::after {
-      top: calc(-166px + var(--flow-line-y));
+      top: calc(-16px + var(--flow-line-y));
       z-index: 0;
-      background: linear-gradient(90deg, #596d38, var(--acid) 48%, #596d38);
-      clip-path: polygon(0 68%, 100% 22%, 100% 29%, 0 75%);
-      filter: blur(4px);
-      opacity: .64;
+      background: linear-gradient(90deg, transparent 0%, #596d38 28%, var(--acid) 48%, #596d38 72%, transparent 100%);
+      clip-path: polygon(0 64%, 100% 18%, 100% 34%, 0 80%);
+      filter: blur(3px);
+      opacity: .58;
       transform: translate3d(var(--flow-shift-back), calc(var(--flow-drift-y) * -.6), 0) skewX(calc(var(--flow-skew) * -.45));
       will-change: transform;
     }
-    .flow-from-light { --transition-current: var(--bg); }
-    .flow-from-dark { --transition-current: #e9e5dc; }
-    .flow-from-dark-acid { --transition-current: var(--acid); }
-    #problem.flow-transition::before, #problem.flow-transition::after { top: calc(-34px + var(--flow-line-y)); height: 164px; }
+    .flow-from-light { --transition-current: #e9e5dc; --transition-next: var(--bg); }
+    .flow-from-dark { --transition-current: var(--bg); --transition-next: #e9e5dc; }
+    .flow-from-dark-acid { --transition-current: var(--bg); --transition-next: var(--acid); }
     @supports (animation-timeline: scroll()) {
       .flow-surface {
         animation: flow-surface-scroll linear both;
@@ -430,7 +439,9 @@
       .wrap, .nav-inner { width: min(calc(100dvw - 36px), var(--max)); }
       section { padding: 82px 0; }
       .hero { padding-bottom: 62px; }
-      .hero h1 { font-size: clamp(3.2rem, 16vw, 5.2rem); }
+      .hero h1 { font-size: clamp(3.2rem, 16vw, 5.2rem); line-height: 1.02; letter-spacing: -.06em; }
+      .section-head h2 { line-height: 1.04; letter-spacing: -.055em; }
+      .case-visual h3, .case-body h3, .case-card h3, .cta-section h2 { line-height: 1.03; letter-spacing: -.055em; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-actions .button { width: 100%; }
       .system-card { padding: 16px; }
@@ -452,10 +463,10 @@
     @media (max-width: 600px) {
       :root { --flow-motion-scale: .62; }
       .flow-surface { opacity: .24; }
-      .flow-transition::before, .flow-transition::after { height: 190px; }
-      .flow-transition::before { filter: blur(12px); }
-      .flow-transition::after { filter: blur(5px); }
-      #problem.flow-transition::before, #problem.flow-transition::after { top: calc(-26px + var(--flow-line-y)); height: 128px; }
+      .flow-transition::before, .flow-transition::after { height: 110px; }
+      .flow-transition::before { filter: blur(14px); }
+      .flow-transition::after { filter: blur(4px); }
+      #problem.flow-transition::before, #problem.flow-transition::after { top: calc(-18px + var(--flow-line-y)); height: 110px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
@@ -836,20 +847,20 @@
       // visible snap caused by modulo arithmetic at the cycle boundary.
       const loopPhase = scroll * .0034;
       const slowPhase = loopPhase * .58 + .75;
-      const shift = Math.sin(loopPhase) * 220 * scale;
-      const driftY = Math.sin(slowPhase) * 28 * scale;
-      const orbX = Math.sin(loopPhase * .58 + 1.4) * 260 * scale;
-      const orbY = Math.cos(loopPhase * .75) * 160 * scale;
-      const skew = Math.sin(loopPhase * .45) * 2.5 * scale;
+      const shift = Math.sin(loopPhase) * 96 * scale;
+      const driftY = Math.sin(slowPhase) * 12 * scale;
+      const orbX = Math.sin(loopPhase * .58 + 1.4) * 210 * scale;
+      const orbY = Math.cos(loopPhase * .75) * 120 * scale;
+      const skew = Math.sin(loopPhase * .45) * 1.2 * scale;
       flowRoot.style.setProperty('--flow-shift', shift.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-shift-back', (-shift * .55).toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-drift-y', driftY.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-orb-x', orbX.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-orb-y', orbY.toFixed(1) + 'px');
       flowRoot.style.setProperty('--flow-skew', skew.toFixed(2) + 'deg');
-      const lineY = (0.5 + 0.5 * Math.sin(slowPhase - Math.PI / 2)) * 46 * scale;
+      const lineY = (0.5 + 0.5 * Math.sin(slowPhase - Math.PI / 2)) * 16 * scale;
       flowRoot.style.setProperty('--flow-line-y', lineY.toFixed(1) + 'px');
-      if (!hasScrollTimeline) flowRoot.style.setProperty('--flow-css-drift', (Math.sin(loopPhase * .35) * 64 * scale).toFixed(1) + 'px');
+      if (!hasScrollTimeline) flowRoot.style.setProperty('--flow-css-drift', (Math.sin(loopPhase * .35) * 28 * scale).toFixed(1) + 'px');
       flowFrame = null;
     }
     window.addEventListener('scroll', () => {
