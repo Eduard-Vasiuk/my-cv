@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eduard Vasyuk | Junior Media Buyer | Meta Ads, Google Ads</title>
-  <meta name="description" content="Eduard Vasyuk: junior media buyer working with Meta Ads, Google Ads, AppsFlyer, reporting and practical marketing automation. Available in English, Ukrainian and Russian.">
+  <meta id="meta-description" name="description" content="Eduard Vasyuk: junior media buyer working with Meta Ads, Google Ads, AppsFlyer, reporting and practical marketing automation. Available in English, Ukrainian and Russian.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#101114">
   <link rel="canonical" href="https://eduard-vasiuk.github.io/my-cv/">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Eduard Vasyuk | Junior Media Buyer">
-  <meta property="og:description" content="Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
+  <meta id="meta-og-title" property="og:title" content="Eduard Vasyuk | Junior Media Buyer">
+  <meta id="meta-og-description" property="og:description" content="Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
   <meta property="og:url" content="https://eduard-vasiuk.github.io/my-cv/">
   <meta property="og:image" content="https://eduard-vasiuk.github.io/my-cv/og-image.png">
   <meta property="og:image:secure_url" content="https://eduard-vasiuk.github.io/my-cv/og-image.png">
@@ -18,15 +18,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
   <meta property="og:site_name" content="Eduard Vasyuk">
-  <meta property="og:locale" content="en_US">
+  <meta id="meta-og-locale" property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eduard Vasyuk | Junior Media Buyer">
-  <meta name="twitter:description" content="Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
+  <meta id="meta-twitter-title" name="twitter:title" content="Eduard Vasyuk | Junior Media Buyer">
+  <meta id="meta-twitter-description" name="twitter:description" content="Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.">
   <meta name="twitter:image" content="https://eduard-vasiuk.github.io/my-cv/og-image.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Eduard Vasyuk","jobTitle":"Junior Media Buyer","url":"https://eduard-vasiuk.github.io/my-cv/","sameAs":["https://github.com/Eduard-Vasiuk"],"knowsAbout":["Meta Ads","Google Ads","Paid Acquisition","AppsFlyer","Marketing Automation"]}</script>
   <style>
     .language-switcher { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
-    .language-switcher button { border: 0; background: transparent; color: var(--paper-muted); padding: 7px 9px; border-radius: 999px; cursor: pointer; font: 700 .68rem/1 "SFMono-Regular", Consolas, monospace; letter-spacing: .08em; }
+    .language-switcher button { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--paper-muted); padding: 0 7px; border-radius: 999px; cursor: pointer; font: 700 .68rem/1 "SFMono-Regular", Consolas, monospace; letter-spacing: .08em; }
     .language-switcher button.active, .language-switcher button:hover { color: var(--ink); background: var(--acid); }
     .hero-photo-card { border: 1px solid var(--line); background: var(--bg-soft); border-radius: 24px; padding: 14px; box-shadow: 0 30px 90px rgba(0,0,0,.28); }
     .photo-frame { position: relative; overflow: hidden; border-radius: 16px; aspect-ratio: 636 / 900; background: #24252b; }
@@ -51,7 +51,9 @@
       .experience-grid { grid-template-columns: 1fr; gap: 28px; }
     }
     @media (max-width: 600px) {
-      .language-switcher button { padding: 7px 7px; }
+      .nav-inner { gap: 8px; }
+      .language-switcher { gap: 2px; padding: 2px; margin-right: 0; }
+      .language-switcher button { min-width: 44px; min-height: 44px; }
       .photo-caption { align-items: flex-start; flex-direction: column; gap: 4px; }
       .experience-item { grid-template-columns: 1fr; gap: 8px; }
     }
@@ -474,9 +476,9 @@
         <a class="nav-cta" href="#contact" data-contact-open data-i18n="navCta">Discuss a role</a>
       </div>
       <div class="language-switcher" aria-label="Language switcher">
-        <button type="button" data-lang="ru">RU</button>
-        <button type="button" data-lang="uk">UA</button>
-        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+        <button type="button" data-lang="en" class="active" aria-pressed="true">EN</button>
       </div>
     </div>
   </nav>
@@ -646,7 +648,7 @@
     <section class="case-dialog" role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
       <div class="case-dialog-head">
         <div class="mono" data-case-field="kicker">04 / Case detail</div>
-        <button class="contact-close" type="button" data-case-close aria-label="Close">×</button>
+        <button class="contact-close" type="button" data-case-close data-i18n-aria="caseModalClose" aria-label="Close">×</button>
       </div>
       <h2 id="case-modal-title" data-case-field="title">Case title</h2>
       <p class="case-dialog-summary" data-case-field="summary">Case summary</p>
@@ -664,7 +666,7 @@
     <section class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
       <div class="contact-dialog-head">
         <div class="mono" data-i18n="contactModalKicker">07 / Direct contact</div>
-        <button class="contact-close" type="button" data-contact-close aria-label="Close">×</button>
+        <button class="contact-close" type="button" data-contact-close data-i18n-aria="contactClose" aria-label="Close">×</button>
       </div>
       <h2 id="contact-modal-title" data-i18n="contactModalTitle">Choose where to contact me.</h2>
       <p data-i18n="contactModalText">Open the platform you use most. Each link takes you directly to my profile or chat.</p>
@@ -776,6 +778,30 @@
       }
     };
 
+    const seoTranslations = {
+      en: {
+        title: "Eduard Vasyuk | Junior Media Buyer | Meta Ads",
+        description: "Eduard Vasyuk is a junior media buyer working with Meta Ads, Google Ads, AppsFlyer, reporting and practical marketing automation.",
+        ogTitle: "Eduard Vasyuk | Junior Media Buyer",
+        ogDescription: "Meta Ads, Google Ads, AppsFlyer attribution, recurring reporting and practical marketing automation.",
+        locale: "en_US"
+      },
+      ru: {
+        title: "Эдуард Васюк | Junior Media Buyer | Meta Ads",
+        description: "Эдуард Васюк — junior media buyer: Meta Ads, Google Ads, AppsFlyer, отчётность и практическая автоматизация маркетинга.",
+        ogTitle: "Эдуард Васюк | Junior Media Buyer",
+        ogDescription: "Meta Ads, Google Ads, атрибуция AppsFlyer, регулярная отчётность и автоматизация маркетинга.",
+        locale: "ru_RU"
+      },
+      uk: {
+        title: "Едуард Васюк | Junior Media Buyer | Meta Ads",
+        description: "Едуард Васюк — junior media buyer: Meta Ads, Google Ads, AppsFlyer, звітність і практична автоматизація маркетингу.",
+        ogTitle: "Едуард Васюк | Junior Media Buyer",
+        ogDescription: "Meta Ads, Google Ads, атрибуція AppsFlyer, регулярна звітність і автоматизація маркетингу.",
+        locale: "uk_UA"
+      }
+    };
+
     let activeCaseId = null;
     const caseData = {
       feature: { kicker: "caseFeatureKicker", title: "caseFeatureTitle", summary: "caseFeatureSummary", problem: "caseFeatureProblem", approach: "caseFeatureApproach", output: "caseFeatureOutput", proof: "caseFeatureProof", guardrail: "caseFeatureGuardrail" },
@@ -851,7 +877,23 @@
         const value = dictionary[el.dataset.i18nHtml];
         if (value !== undefined) el.innerHTML = value;
       });
-      document.querySelectorAll('[data-lang]').forEach((button) => button.classList.toggle('active', button.dataset.lang === lang));
+      document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+        const value = dictionary[el.dataset.i18nAria];
+        if (value !== undefined) el.setAttribute('aria-label', value);
+      });
+      document.querySelectorAll('[data-lang]').forEach((button) => {
+        const active = button.dataset.lang === lang;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      const seo = seoTranslations[lang] || seoTranslations.en;
+      document.title = seo.title;
+      document.getElementById('meta-description')?.setAttribute('content', seo.description);
+      document.getElementById('meta-og-title')?.setAttribute('content', seo.ogTitle);
+      document.getElementById('meta-og-description')?.setAttribute('content', seo.ogDescription);
+      document.getElementById('meta-og-locale')?.setAttribute('content', seo.locale);
+      document.getElementById('meta-twitter-title')?.setAttribute('content', seo.ogTitle);
+      document.getElementById('meta-twitter-description')?.setAttribute('content', seo.ogDescription);
       try { localStorage.setItem('site-language', lang); } catch (_) {}
       renderCaseModal();
     }
@@ -892,12 +934,33 @@
     const contactModal = document.getElementById('contact-modal');
     const contactOpeners = document.querySelectorAll('[data-contact-open]');
     let lastContactTrigger = null;
+    function getModalFocusableElements(modal) {
+      return [...modal.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')]
+        .filter((element) => !element.hidden && element.getClientRects().length > 0);
+    }
+    function trapModalFocus(event, modal) {
+      if (event.key !== 'Tab') return;
+      const focusable = getModalFocusableElements(modal);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (!modal.contains(document.activeElement)) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
     function openContactModal(trigger) {
       lastContactTrigger = trigger || null;
       contactModal.hidden = false;
       contactModal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
-      contactModal.querySelector('.contact-option')?.focus();
+      contactModal.querySelector('.contact-dialog .contact-close')?.focus();
     }
     function closeContactModal() {
       contactModal.hidden = true;
@@ -913,7 +976,9 @@
       element.addEventListener('click', closeContactModal);
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !contactModal.hidden) closeContactModal();
+      if (contactModal.hidden) return;
+      if (event.key === 'Escape') closeContactModal();
+      else trapModalFocus(event, contactModal);
     });
 
     const caseModal = document.getElementById('case-modal');
@@ -925,7 +990,7 @@
       caseModal.hidden = false;
       caseModal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
-      caseModal.querySelector('[data-case-close]')?.focus();
+      caseModal.querySelector('.case-dialog .contact-close')?.focus();
     }
     function closeCaseModal() {
       caseModal.hidden = true;
@@ -947,7 +1012,9 @@
       element.addEventListener('click', closeCaseModal);
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !caseModal.hidden) closeCaseModal();
+      if (caseModal.hidden) return;
+      if (event.key === 'Escape') closeCaseModal();
+      else trapModalFocus(event, caseModal);
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
