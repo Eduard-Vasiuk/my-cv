@@ -150,7 +150,7 @@
     .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr); gap: 78px; align-items: center; }
     .hero h1 {
       max-width: 760px; margin: 22px 0 26px; font-size: clamp(3.6rem, 8vw, 7.4rem);
-      line-height: .9; letter-spacing: -.085em; font-weight: 850;
+      line-height: .98; letter-spacing: -.055em; font-weight: 850; text-wrap: balance;
     }
     .hero h1 em { color: var(--acid); font-style: normal; }
     .hero-lead { max-width: 620px; color: var(--paper-muted); font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1.55; }
@@ -180,7 +180,7 @@
     .dark-section { background: var(--bg); }
     .paper-section { background: var(--paper); color: var(--ink); }
     .section-head { display: grid; grid-template-columns: .6fr 1.4fr; gap: 40px; align-items: start; margin-bottom: 54px; }
-    .section-head h2 { margin: 0; max-width: 850px; font-size: clamp(2.4rem, 5vw, 5.2rem); line-height: .98; letter-spacing: -.07em; }
+    .section-head h2 { margin: 0; max-width: 850px; font-size: clamp(2.4rem, 5vw, 5.2rem); line-height: 1.03; letter-spacing: -.045em; text-wrap: balance; }
     .section-intro { max-width: 600px; color: var(--ink-muted); font-size: 1.1rem; }
     .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-dark); }
     .problem { padding: 28px 24px 8px 0; border-right: 1px solid var(--line-dark); }
@@ -203,13 +203,13 @@
     }
     .case-visual { min-height: 430px; padding: 30px; background: #16171b; color: var(--paper); position: relative; overflow: hidden; }
     .case-visual::before { content: ""; position: absolute; width: 310px; height: 310px; right: -90px; bottom: -100px; border-radius: 50%; border: 1px solid rgba(196,243,106,.35); box-shadow: 0 0 0 24px rgba(196,243,106,.04), 0 0 0 48px rgba(196,243,106,.03); }
-    .case-visual h3 { position: relative; z-index: 1; max-width: 290px; font-size: 2.2rem; line-height: 1; letter-spacing: -.06em; margin: 22px 0; }
+    .case-visual h3 { position: relative; z-index: 1; max-width: 290px; font-size: 2.2rem; line-height: 1.06; letter-spacing: -.045em; margin: 22px 0; text-wrap: balance; }
     .case-route { position: absolute; z-index: 1; left: 30px; right: 30px; bottom: 32px; display: grid; gap: 8px; }
     .route-item { border: 1px solid var(--line); padding: 12px 14px; display: flex; justify-content: space-between; color: var(--paper-muted); }
     .route-item b { color: var(--acid); font-weight: 500; }
     .case-body { padding: 34px 38px; }
     .case-kicker { color: #6354c7; }
-    .case-body h3 { font-size: 2.3rem; line-height: 1; letter-spacing: -.06em; margin: 14px 0 18px; }
+    .case-body h3 { font-size: 2.3rem; line-height: 1.06; letter-spacing: -.045em; margin: 14px 0 18px; text-wrap: balance; }
     .case-body > p { color: var(--ink-muted); max-width: 600px; }
     .case-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 26px; margin: 26px 0 30px; padding: 0; list-style: none; }
     .case-list li { font-size: .94rem; display: flex; gap: 8px; align-items: baseline; }
@@ -225,7 +225,7 @@
     .case-card { background: #f3f0e9; border: 1px solid var(--line-dark); padding: 28px; min-height: 360px; display: flex; flex-direction: column; }
     .case-card:hover { transform: translateY(-4px); transition: transform .2s ease; }
     .case-card .case-card-number { color: #6354c7; }
-    .case-card h3 { margin: 58px 0 12px; font-size: 1.55rem; line-height: 1.05; letter-spacing: -.05em; }
+    .case-card h3 { margin: 58px 0 12px; font-size: 1.55rem; line-height: 1.08; letter-spacing: -.04em; text-wrap: balance; }
     .case-card p { color: var(--ink-muted); margin: 0; }
     .case-card-footer { margin-top: auto; padding-top: 26px; color: #6354c7; }
     .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -241,7 +241,7 @@
     .capability p { margin: 0; color: var(--paper-muted); }
     .cta-section { padding: 130px 0 80px; background: var(--acid); color: var(--ink); }
     .cta-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: end; }
-    .cta-section h2 { max-width: 780px; font-size: clamp(3rem, 7vw, 7rem); line-height: .88; letter-spacing: -.09em; margin: 18px 0; }
+    .cta-section h2 { max-width: 780px; font-size: clamp(3rem, 7vw, 7rem); line-height: .98; letter-spacing: -.05em; margin: 18px 0; text-wrap: balance; }
     .cta-section p { max-width: 440px; color: #3d4a27; font-size: 1.1rem; }
     .cta-section .button-primary { background: var(--ink); color: var(--paper); }
     footer { background: var(--acid); color: var(--ink); padding: 20px 0 34px; }
@@ -383,7 +383,7 @@
     .contact-close::after { transform: rotate(-45deg); }
     .contact-close:hover { background: var(--acid); color: var(--ink); }
     .contact-close:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
-    .contact-dialog h2 { max-width: 470px; margin: 0 0 14px; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: .94; letter-spacing: -.075em; }
+    .contact-dialog h2 { max-width: 470px; margin: 0 0 14px; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.04; letter-spacing: -.045em; text-wrap: balance; }
     .contact-dialog > p { max-width: 440px; margin: 0 0 24px; color: var(--ink-muted); }
     .contact-options { display: grid; gap: 10px; }
     .contact-option { display: grid; grid-template-columns: 42px 1fr auto; gap: 13px; align-items: center; padding: 14px 16px; border: 1px solid var(--line-dark); border-radius: 14px; color: var(--ink); transition: transform .2s ease, background .2s ease; }
@@ -406,7 +406,7 @@
     .case-dialog { position: relative; z-index: 1; width: min(100%, 760px); max-height: min(720px, calc(100vh - 44px)); overflow: auto; padding: 30px; border: 1px solid var(--line-dark); border-radius: 24px; background: var(--paper); color: var(--ink); box-shadow: 0 30px 100px rgba(0,0,0,.35); }
     .case-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
     .case-dialog-head .mono { padding-top: 9px; color: #6354c7; }
-    .case-dialog h2 { max-width: 620px; margin: 0 0 14px; font-size: clamp(2.3rem, 6vw, 5rem); line-height: .92; letter-spacing: -.08em; }
+    .case-dialog h2 { max-width: 620px; margin: 0 0 14px; font-size: clamp(2.3rem, 6vw, 5rem); line-height: 1.04; letter-spacing: -.045em; text-wrap: balance; }
     .case-dialog-summary { max-width: 640px; margin: 0 0 28px; color: var(--ink-muted); font-size: 1.05rem; }
     .case-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .case-detail-card { padding: 18px; border: 1px solid var(--line-dark); border-radius: 14px; }
@@ -440,15 +440,15 @@
       .wrap, .nav-inner { width: min(calc(100dvw - 36px), var(--max)); }
       section { padding: 82px 0; }
       .hero { padding-bottom: 62px; }
-      .hero h1 { font-size: clamp(3.2rem, 16vw, 5.2rem); line-height: 1.02; letter-spacing: -.06em; }
-      .section-head h2 { line-height: 1.04; letter-spacing: -.055em; }
-      .case-visual h3, .case-body h3, .case-card h3, .cta-section h2 { line-height: 1.03; letter-spacing: -.055em; }
+      .hero h1 { max-width: 12ch; font-size: clamp(2.95rem, 14vw, 4.2rem); line-height: 1.06; letter-spacing: -.035em; }
+      .section-head h2 { line-height: 1.08; letter-spacing: -.035em; }
+      .case-visual h3, .case-body h3, .case-card h3, .cta-section h2 { line-height: 1.08; letter-spacing: -.035em; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-actions .button { width: 100%; }
       .system-card { padding: 16px; }
       .case-body { padding: 28px 22px; }
       .case-visual { min-height: auto; padding: 28px 22px 24px; }
-      .case-visual h3 { max-width: none; font-size: clamp(2.1rem, 10.5vw, 3rem); line-height: .98; margin: 20px 0 0; }
+      .case-visual h3 { max-width: none; font-size: clamp(1.95rem, 9.5vw, 2.7rem); line-height: 1.08; margin: 20px 0 0; }
       .case-route { position: relative; left: auto; right: auto; bottom: auto; margin-top: 28px; }
       .route-item { padding: 11px 12px; }
       .case-list, .capability-grid { grid-template-columns: 1fr; }
@@ -458,7 +458,7 @@
       .metric:not(:first-child) { padding-left: 12px; }
       .metric:nth-child(odd) { padding-left: 0; }
       .proof-grid { grid-template-columns: 1fr 1fr; }
-      .cta-section h2 { font-size: clamp(3.5rem, 17vw, 6rem); }
+      .cta-section h2 { font-size: clamp(2.8rem, 14vw, 5.2rem); line-height: 1.04; letter-spacing: -.04em; }
       .footer-row { flex-direction: column; }
     }
     @media (max-width: 600px) {
